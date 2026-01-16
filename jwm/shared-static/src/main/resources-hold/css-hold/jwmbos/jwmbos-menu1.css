@@ -1,0 +1,226 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+  background: white;
+  transition: all .5s;
+  box-shadow: 0 3px 15px rgba(0,0,0,.4);
+  border-radius: 8px;
+}
+
+.nav ul{
+  float: right;
+}
+
+.nav ul li{
+  align-items: center;
+  display: inline-block;
+  border-radius: 8px;
+  margin-right: 1vw;
+}
+
+.nav ul li a{
+  color: black;
+  display: block;
+  padding: 0 2vw;
+  line-height: 70px;
+  font-size: 18px;
+  transition: .5s;
+  text-decoration: none;
+}
+
+.nav ul li a:hover {
+  color: #004cff;
+  transform: scale(1.2);
+}
+.nav ul ul{
+  position: absolute;
+  top: 85px;
+  z-index: 999;
+  margin-top: 12vh;
+}
+
+.nav ul ul ul {
+  z-index: 998;
+  margin-top: none;
+  margin-top: -1.6vh;
+}
+
+.nav ul ul li {
+  background-color: white;
+  text-align: left;
+  border-top: 1px solid black;
+  box-shadow: 0 3px 5px rgba(0,0,0,.4);
+}
+
+.nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+  transition: .3s linear;
+}
+
+.nav ul ul li{
+  width: 150px;
+  display: list-item;
+  position: relative;
+  border: 1px solid  black;
+}
+
+.nav ul ul li a{
+  line-height: 50px;
+  font-size: 14px;
+}
+
+.nav ul ul ul{
+  border-top: none;
+}
+
+.nav ul ul ul li{
+  position: relative;
+  top: -70px;
+  left: 150px;
+}
+
+.nav ul ul li a i{
+  margin-left: 45px;
+}
+
+.nav ul li input {
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 150px;
+  background-color: white;
+  box-shadow: 0 3px 4px rgba(0,0,0,.4);
+}
+
+.checkbtn{
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height: 80px;
+  margin-right: 90%;
+  cursor: pointer;
+  display: none;
+}
+
+#check{
+  display: none;
+}
+
+@media (max-width: 952px) {
+  .nav ul li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn {
+    display: block;
+  }
+
+  .nav {
+    box-shadow: none;
+    transition: all .5s;
+  }
+
+  ul {
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    background: #2c3e50;
+    left: -100%;
+    top: 0;
+    text-align: start;
+    transition: all .5s;
+    box-shadow: 3px black;
+  }
+  .nav ul li {
+    display: block;
+    margin: 7vh 0 0 2vw;
+    line-height: 30px;
+  }
+  .nav ul li a {
+    font-size: 20px;
+  }
+  .nav ul li a:hover {
+    color: white;
+    transform: translate(2vw, 0);
+  }
+
+  #check:checked ~ ul{
+    left: 0;
+  }
+
+  /* VERTICAL NESTING  -->UNFINISHED<-- */
+
+  /* .nav ul ul{
+    position: absolute;
+    top: 85px;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 13.6vh;
+  }
+
+  .nav ul ul ul {
+    margin-top: none;
+    margin-top: -.18vh;
+  }
+
+  .nav ul ul li {
+    background-color: white;
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 3px 15px rgba(0,0,0,.4);
+  }
+
+  .nav ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+    transition: .3s linear;
+  }
+
+  .nav ul ul li{
+    width: 150px;
+    display: list-item;
+    position: relative;
+    border: 1px solid  black;
+  }
+
+  .nav ul ul li a{
+    line-height: 50px;
+    font-size: 14px;
+  }
+
+  .nav ul ul ul{
+    border-top: none;
+  }
+
+  .nav ul ul ul li{
+    position: relative;
+    top: -70px;
+    left: 150px;
+  }
+
+  .nav ul ul li a i{
+    margin-left: 45px;
+  }
+
+  .nav ul li input {
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 150px;
+    background-color: white;
+    box-shadow: 0 3px 4px rgba(0,0,0,.4);
+  } */
+
+}

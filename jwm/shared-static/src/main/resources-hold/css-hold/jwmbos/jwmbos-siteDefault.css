@@ -1,0 +1,567 @@
+--fontSizeBody:                18px;
+
+html                             { font-size: var(--fontSizeBody); }
+[class*="shadowbox"]                                                                                                                                                                         { background-color: var(--paletteColor200); }
+[class*="shadowbox"] [class*="shadowbox"]                                                                                                                                                    { background-color: var(--paletteColor201); }
+[class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"]                                                                                                                               { background-color: var(--paletteColor202); }
+[class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"]                                                                                                          { background-color: var(--paletteColor203); }
+[class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"]                                                                                     { background-color: var(--paletteColor204); }
+[class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"]                                                                { background-color: var(--paletteColor205); }
+[class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"]                                           { background-color: var(--paletteColor206); }
+[class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"]                      { background-color: var(--paletteColor207); }
+[class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"] [class*="shadowbox"] { background-color: var(--paletteColor208); }
+[class*="shadowbox"]             { overflow:hidden; box-shadow: var(--dropShadow) }
+
+.innerpadding                    { padding: 25px }
+
+.light                           { background-color: var(--paletteColor100) !important;}
+.medLight                        { background-color: var(--paletteColor102) !important;}
+.dark                            { background-color: var(--paletteColor205) !important;}
+
+.inset                           { padding:20px; margin:0 5% 15px 5% }
+
+.allNone                         { font-weight:bold; color:black; }
+.allSome                         { font-weight:bold; color:blue; }
+
+.alt-th                          { font-size:12px; background-color: rgb(80,80,80); color:rgb(240,240,240); }
+.bodyBase                        { background: var(--colorBody); font-family: var(--fontBody); font-size: var(--fontSizeBody); color: var(--colorText); font-weight: var(--fontBodyWeight);}
+.bold                            { font-weight:bold; }
+.borderRight                     { border-right: 3px var(--paletteColorText); }
+.altTextColor                    { color: var(--colorAltText); }
+
+.breadcrumbLink                  { color:rgb(0,0,255); text-decoration:underline; cursor:pointer; cursor:hand;}
+.breadcrumbThis                  { font-size:20px; font-weight:bold; }
+
+.dataTablesTH                    { background-color: rgb(255,255,255); color:rgb(0,0,0); }
+.dbgTxt                          { font-style:italic; color:blue; }
+.error1111                       { font-weight:bold; color:red; background-color: var(--paletteColor101); }
+.flowHeader                      { background-color:var(--colorContainer3); border: var(--border); }
+.footerLink                      { color:white; }
+
+.homePageBlock                   { }
+.hrBase                          { color: rgb(0,117,47); background: rgb(0,117,47); }
+.lightBoxScreen                  { background-color:#202020; opacity:0.8; }
+.inputBase                       { border: 0px; color: var(--colorInputText); }
+input                            { border: 0px; background-color: var(--colorInput ); }
+textarea                         { border:0px; background-color: var(--colorInput ); }
+checkbox                         { border:0px; background-color: var(--colorInput ); }
+radiobutton                      { border:0px; background-color: var(--colorInput ); }
+select                           { background-color: var(--colorInput ); }
+.projectIcon                     { background: url("/images/logo-sub.png"); background-size:contain; background-repeat:no-repeat; }
+.quickstart                      { margin-top:25px; background-color: var(--colorContainer2 ); box-shadow: 3px 3px 5px 6px rgb(0, 0, 128, .4); border-radius:25px; border: 1px solid rgb(0,0,128); min-height: 350px; }
+.reverseHighlight                { color:white; background-color:red; }
+
+.welcome                         { padding: 30px; margin-top:25px; background-color: var(--colorContainer2 ); box-shadow: 3px 3px 5px 6px rgb(0, 0, 128, .4); border-radius:25px; border: 1px solid rgb(0,0,128);}
+
+.row0                            { background-color: var(--colorRow);}
+.row1                            { background-color: var(--colorRow2);}
+.rowAlt                          { background-color: var(--colorRow3);}
+
+.suggest                         { position: absolute; z-index:3; background-color: #F0F0F0; color:black; font-size:13px; border: solid black; border-width: 0 1px 1px 1px}
+.sectionMessage                  { color:red;}
+.separator                       { background-color: var(--colorSeparator); color: var(--colorSeparatorText); }
+.siteBold                        { font-weight:bold; font-size:18px; }
+.siteStrong                      { font-size:18px; }
+.siteMedium                      { font-size:12px; }
+.siteSmall                       { font-size:11px; }
+.defaultFont                     { font-size:14px; font-weight:normal }
+
+.stateCompleted                  { color:green; }
+.stateCurrent                    { color:blue; }
+.stateNotEntered                 { color:orange; }
+.statusActive                    { color: green; }
+.statusBase                      { font-weight:bold; }
+.textShadow                      { var(--textShadow); }
+
+.bottomBar                       { background-color: var(--colorBottomBar); color: var(--colorBottomBarText); padding:15px; font-weight:bold;}
+
+.dropShadow                      { var(--dropShadow) }
+.border                          { var(--border) }
+
+.statusCold                      { color: blue; }
+.statusCool                      { color: magenta; }
+.statusDefault                   { color: gray}
+.statusHold                      { color: magenta; }
+.statusHot                       { color: red; }
+.statusIdle                      { color:black; }
+.statusWarm                      { color: #ff7000 ; }
+.statusClosing                   { color: purple ; }
+
+.subtext                         { color:blue;}
+.suggest_link                    { background-color: #FFFFFF; color:black}
+.suggest_link_over               { background-color: #E0E0FF; color:black }
+.theader                         { background-color: var(--colorText); color: var(--paletteColor100); }
+.th2                             { background-color: rgb(200,250,200); color: black; font-weight:normal;}
+.th3                             { background-color: rgb(200,200,250); color: black; font-weight:normal;}
+
+.trackingdateback                { color: red; }
+.trackingdateforward             { color: green; }
+
+.viewiconactive                  { opacity:0.3; }
+
+[class*="sectionH"]              { }
+[class*="status"]                { font-weight:bold; }
+
+button                           { font-size: 15px; font-weight: bold; text-decoration:none; border: 0px; color: var(--colorButtonText); background-color: var(--colorButton); }
+button:hover                     { background-color:var(--colorButtonHover); color:var(--colorButtonHoverText);}
+button:disabled                  { background-color:var(--colorButtonHover); color:rgb(128,128,128);}
+button:active                    { background-color:var(--colorButtonClick); color:var(--colorButtonClickText);}
+button:visited                   { var(--colorButton); }
+
+.button                           { font-size: 15px; font-weight: bold; text-decoration:none; border: 0px; color: var(--colorButtonText); background-color: var(--colorButton); }
+.reverseButtonColor               { color: var(--colorButton); background-color: var(--colorButtonText); }
+.button:hover                     { background-color:var(--colorButtonHover); color:var(--colorButtonHoverText);}
+.button:disabled                  { background-color:var(--colorButtonHover); color:var(--colorButtonHoverText);}
+.button:active                    { background-color:var(--colorButtonClick); color:var(--colorButtonClickText);}
+.button:visited                   { var(--colorButton); }
+
+button.disabled:hover            { color: var(--colorButtonText); background-color: var(--colorButton); }
+button.disabled:active           { color: var(--colorButtonText); background-color: var(--colorButton); }
+button.disabled:visited          { color: var(--colorButtonText); background-color: var(--colorButton); }
+
+th                               { background-color: rgb(80,80,80); color:rgb(240,240,240); }
+.fancy                           { font-family: var(--fontFancy); }
+.socialLink                      { text-decoration: none }
+
+.fadein                          {opacity: 0; -moz-transition: opacity 0.5s; -webkit-transition: opacity 0.5s; -o-transition: opacity 0.5s; transition: opacity 0.5s; }
+.fadeinShort                     {opacity: 0; -moz-transition: opacity 0.2s; -webkit-transition: opacity 0.2s; -o-transition: opacity 0.2s; transition: opacity 0.2s; }
+
+.galleryItem                     { var(--noBorder); var(--dropshadow) }
+.galleryItemSelected             { border:5px solid blue; var(--dropshadow) }
+.gallerySelectionList            { var(--noBorder); ; var(--dropshadow) }
+
+.hrBase                          { border: 0; }
+.login fieldset                  { border: none; }
+
+.workItemList_1                  { border-color: #808080; }
+.workItemList_2                  { border-color: #0000A0; }
+.workItemList_3                  { border-color: #008000; }
+.workItemList_4                  { border-color: #ffff00;  }
+
+[class*="currency"]              { font-weight:bold; }
+.currencyNeg                     { color:red; }
+.currencyPos                     { color:green;}
+.currencyZero                    { color:black; }
+.currencyNeutral                 { color:blue; }
+.currencyPayable2                { color:magenta; }
+.inheritedData                   { color: rgb(128,128,128); font-weight:normal;}
+
+[class*="altCurrency"]           { font-weight:bold; }
+.altCurrencyNeg                     { color:red; }
+.altCurrencyPos                     { color:green;}
+.altCurrencyZero                    { display:none;}
+.altCurrencyNeutral                 { color:magenta; }
+
+.inheritedData                   { color: rgb(128,128,128); font-weight:normal;}
+
+[class*="accountStatus"]         { var(--textShadow) }
+.accountStatusAbandoned          { background:rgb(100,100,100); }
+.accountStatusPaid               { background:rgb(220,220,255); }
+.accountStatusNeverUsed          { background:rgb(255,255,255); }
+.accountStatusNoPayment          { background:rgb(255,220,220); }
+.accountStatusPartialPayment     { background:rgb(255,255,195); }
+.accountStatusSurplusPayment     { background:rgb(220,255,220); }
+
+.rounded                         { border-radius: 20px; !important}
+a                                { color:var(--colorText); text-decoration:none; }
+a:visited                        { color:var(--colorText); text-decoration:none; }
+a:hover                          { text-decoration:underline }
+.highlightedAnchor                { font-weight:bold; color:blue; text-decoration:none; }
+.highlightedAnchor:visited        { font-weight:bold; color:blue; text-decoration:none; }
+.highlightedAnchor:hover          { font-weight:bold; text-decoration:underline }
+.deleteIcon                      { float:right; width:20px; cursor:pointer; cursor:hand; }
+.floatLeft                       { float:left; }
+.floatRight                      { float:right; }
+.justifyL                        { text-align:left; }
+.justifyR                        { text-align:right; }
+.justifyC                        { text-align:center; }
+
+.rarrow                          {width:75px}
+.progressbaractiveicon           { height:60px; width:60px; margin-top:10px; border:4px solid black; border-radius:50px; background:rgb(255,255,255) }
+.progressbarinactiveicon         { height:60px; width:60px; margin-top:10px; border:4px solid black; border-radius:50px; background:rgb(150,150,150); opacity:0.1 }
+
+.mapContainer                    { padding-top:50%;}
+.defaultText                     { color: var(--paletteColor1); font-weight:normal; }
+
+.visible                         { visibility:visible;}
+.invisible                       { visibility:hidden;}
+.gone                            { display:none; }
+.sizeplus1                       { font-size: var(--fontSizePlus ); font-weight:bold; }
+.fontSizeMinus                   { font-size: var(--fontSizeMinus) }
+.containImage                    { padding-right: 5px; }
+.imageFill                       { max-width: 100%; padding-right: 5px }
+.height75                        { height: 75px }
+hr                               { color: var( --paletteColor1 ); }
+.productItemCell                 { padding: 5px;}
+.productDataCellH                { text-align:center; font-weight:normal; padding: 5px; font-size: var(--fontSizeMinus );}
+.productDataCell                 { text-align:left; font-weight:normal; padding: 5px; font-size: var(--fontSizeMinus );}
+.nestedBlock                     { padding: 10px; background-color: var(--paletteColor100); }
+.inheritrule                     { font-style:italic; color:blue; }
+.thisItem                        { border: 3px solid #404040; }
+.messageBox                      { width:25%; margin: 20px; padding:10px; border: 2px solid #808080; font-size: var(--fontSizeMinus ); }
+.widthFull                       { width:100% }
+.widthScreen                     { width:100vw}
+.widthScreen50                   { width:50vw}
+.widthScreen75                   { width:75vw}
+
+.closeButton                     { display:inline-block; }
+.photoFrame                      { border:6px solid white; }
+
+[class*="invoice_"]                { font-size: 10pt; color:black; }
+.invoice_InvalidStatus                               { background: rgb(100, 100, 100)  ; color:white; }
+.invoice_Active                                      { background: rgb(128, 0, 0)  ; color:white; }
+.invoice_Deleted                                     { background: rgb(219, 210, 199); color:black; }
+.invoice_Transient                                   { background: rgb(80, 255, 0); color:black; }
+.invoice_Pending_Tip                                 { background: rgb(0, 0, 128); color:white }
+.invoice_Pending                                     { background: rgb(0, 0, 128); color:white }
+.invoice_Paid_Successful                             { background: rgb(128, 128, 255); color:white }
+.invoice_Payment_Declined_No_Retry                   { background: rgb(219, 212, 191); }
+.invoice_Pay_Provision                               { background: rgb(237, 91, 54); color:white }
+.invoice_Captured                                    { background: rgb(204, 85, 0); color:white }
+.invoice_Settled                                     { background: rgb(64, 239, 135); }
+.invoice_Intervention_Required                       { background: rgb(82, 200, 235); }
+.invoice_Voided                                      { background: rgb(117, 155, 74) ; color:black; }
+.invoice_Void_Rejected                               { background: rgb(97, 114, 111) ; color:black; }
+.invoice_Completed                                   { background: rgb(165, 101, 99) ; color:white; }
+.invoice_Addendum_Pending                            { background: rgb(87, 121, 149); color:white }
+.invoice_Addendum_Captured                           { background: rgb(182, 247, 84) ; color:black; }
+.invoice_Error                                       { background: rgb(255, 0, 0); color:white }
+.invoice_Duplicate                                   { background: rgb(0, 128, 0); color:white }
+.invoice_Payment_Declined_Retry                      { background: rgb(248, 154, 100); }
+.invoice_2nd_Payment_Declined_Retry                  { background: rgb(228, 134,  80); color:white }
+.invoice_3rd_Payment_Declined_Retry                  { background: rgb(208, 114,  60); color:white }
+.invoice_4th_Payment_Declined_Retry                  { background: rgb(188,  94,  40); color:white }
+.invoice_Reversed_Payment                            { background: rgb(13, 117, 173) ; color:white; }
+.invoice_Reverse_Payment_Failed                      { background: rgb(200, 200, 0); }
+.invoice_Hold                                        { background: rgb(74, 28, 113); color:white;}
+.invoice_Pending_DriverPass                          { background: rgb(87, 121, 149); color:white }
+.invoice_Deleted_Test                                { background: rgb(125, 75, 125);color:white }
+.invoice_Closed_Not_Paid_omit_charges_group          { background: rgb(50, 128, 255); color:white }
+.invoice_Intervention_required_force_closed          { background: rgb(111, 33, 42); color:white }
+.invoice_Active_now_force_closed                     { background: rgb(171, 135, 19); }
+.invoice_Addendum_captured_deprecated_force_closed   { background: rgb(255, 255, 0); color:black }
+.invoice_Void_rejected_force_closed                  { background: rgb(50,50,50); color:white }
+.invoice_Payment_successful_force_closed             { background: rgb(181, 167, 194); }
+.invoice_Settled_force_closed                        { background: rgb(194, 249, 126); }
+.invoice_Payment_declined_force_closed               { background: rgb(0, 80, 80); color:white }
+.invoice_Splits_failed_force_close                   { background: rgb(0,128,128); }
+.invoice_Hold_force_close                            { background: rgb(0,250,250); }
+.invoice_Captured_force_close                        { background: rgb(59, 87, 165)  ; color:black; }
+.invoice_Reverse_payment_pending_force_close         { background: rgb(18, 90, 122); color:white }
+.invoice_Payment_Declined_Abandoned                  { background: rgb(90, 53, 32); color:white }
+.invoice_Zero_Balance_Abandoned                      { background: rgb(18, 167, 224);color:white }
+.invoice_Splits_Failed                               { background: rgb(51, 22, 37)   ; color:white; }
+.invoice_Paid_                                       { background: rgb(192, 139, 88); }
+.invoice_Force_Closed                                { background: rgb(75, 71, 150); color:white }
+.invoice_2nd_Payment_Declined_Retry                  { background: rgb(247, 200, 189); }
+.invoice_3rd_Payment_Declined_Retry                  { background: rgb(133, 62, 130); color:white }
+.invoice_4th_Payment_Declined_Retry                  { background: rgb(192, 139, 88); }
+.invoice_(Omit)_Pending                              { background: rgb(75, 71, 150); color:white }
+.invoice_(Omit)_Ready for Capture                    { background: rgb(247, 200, 189); }
+.invoice_(Omit)_Captured                             { background: rgb(133, 62, 130); color:white }
+.invoice_(Omit)_Completed                            { background: rgb(6, 62, 78); color:white}
+.invoice_Pending_Splits_Test_Only                    { background: rgb(87, 121, 149); color:white }
+.invoice_Pending_Tip                                 { background: rgb(94, 94, 90)   ; color:white; }
+.invoice_Hold_For_Review                             { background: rgb(128, 0, 255); color:white }
+.invoice_reserved14                                  { background: rgb(0, 128, 255); color:white }
+.invoice_reserved15                                  { background: rgb(175, 71, 204); color:white }
+.invoice_reserved16                                  { background: rgb(49, 125, 4); color:white}
+.invoice_reserved17                                  { background: rgb(165, 101, 99) ; color:black; }
+.invoice_reserved18                                  { background: rgb(35, 33, 45)   ; color:black; }
+.invoice_reserved19                                  { background: rgb(255,255,0); color:black; }
+.invoice_reserved20                                  { background: rgb(255,255,0); color:black; }
+.invoice_reserved21                                  { background: rgb(200, 200, 240); }
+.invoice_expired_in_queue                            { background: rgb(255, 202, 202 ); color:black; }
+.invoice_pending_in_queue                            { background: rgb(202, 255, 202); }
+.invoice_pending_processingDate                      { background: rgb(255, 202, 202 ); color:black; }
+.invoice_ready_for_processing                        { background: rgb(202, 255, 202); }
+.invoice_charges_waived_pending                      { background: rgb(0, 128, 0); color:white }
+.invoice_charges_waived_approved                     { background: rgb(0, 128, 128); color:white }
+
+[class*="processingStep"]                            { background: rgb( 230, 230, 230 ); }
+.processingStepBlocked                               { font-weight:bold; color:purple; }
+.processingStepPending                               { font-weight:bold; color:orange; }
+.processingStepComplete                              { font-weight:bold; color:green; }
+.processingStepError                                 { font-weight:bold; color:red; }
+.processingStepPartialComplete                       { font-weight:bold; color:blue; }
+
+[class*="event_"]                { font-size: 10pt; color:black }
+.event_app_debug                 { background: rgb(100, 100, 100)  ; color:white; }
+.event_app_error                 { background: rgb(128, 0, 0)  ; color:white; }
+.event_app_info                  { background: rgb(219, 210, 199); color:black; }
+.event_app_warning               { background: rgb(80, 255, 0); color:black; }
+.event_constructor               { background: rgb(0, 0, 128); color:white }
+.event_ctrl                      { background: rgb(128, 128, 255); color:white }
+.event_dbcreate                  { background: rgb(219, 212, 191); }
+.event_dbdelete                  { background: rgb(237, 91, 54); }
+.event_dbquery                   { background: rgb(204, 85, 0); color:white }
+.event_dbupdate                  { background: rgb(64, 239, 135); }
+.event_debug                     { background: rgb(82, 200, 235); }
+.event_debug_high                { background: rgb(117, 155, 74) ; color:black; }
+.event_debug_low                 { background: rgb(97, 114, 111) ; color:black; }
+.event_error                     { background: rgb(255, 0, 0); color:white; }
+.event_fatal                     { background: rgb(255, 0, 0); color:white; }
+.event_fieldexport               { background: rgb(182, 247, 84) ; color:black; }
+.event_fare_flow                 { background: rgb(0, 128, 0); color:white }
+.event_invoice_flow              { background: rgb(0, 0, 200); color:white }
+.event_flow                      { background: rgb(0, 128, 0); color:white }
+.event_top_flow                  { background: rgb(0, 128, 128); color:white }
+.event_formdata                  { background: rgb(248, 174, 100); }
+.event_getdbconn                 { background: rgb(13, 117, 173) ; color:black; }
+.event_headers                   { background: rgb(200, 200, 0); }
+.event_important                 { background: rgb(74, 28, 113); color:white;}
+.event_info                      { background: rgb(87, 121, 149); color:white }
+.event_internalservice           { background: rgb(125, 75, 125);color:white }
+.event_iteration                 { background: rgb(50, 128, 255); color:white }
+.event_jmx                       { background: rgb(111, 33, 42); color:white }
+.event_jsonin                    { background: rgb(255, 255, 0); color:black }
+.event_jsonout                   { background: rgb(100, 0, 100); color:white }
+.event_gateway                   { background: rgb(255, 0, 255); color:black }
+.event_fakejsonin                { background: white; color:rgb(171, 135, 19); }
+.event_fakejsonout               { background: black; color:rgb(255, 255, 0) }
+.event_loglevelchange            { background: rgb(50,50,50); color:white }
+.event_logon                     { background: rgb(181, 167, 194); }
+.event_logonfail                 { background: rgb(194, 249, 126); }
+.event_msgcallback               { background: rgb(0, 80, 80); color:white }
+.event_msginit                   { background: rgb(0,128,128); }
+.event_msgpush                   { background: rgb(0,250,250); }
+.event_new_thread                { background: rgb(59, 87, 165)  ; color:white; }
+.event_pagestart                 { background: rgb(18, 90, 122); color:white }
+.event_payment                   { background: rgb(90, 53, 32); color:white }
+.event_pin                       { background: rgb(18, 167, 224);color:white }
+.event_pin_echo                  { background: rgb(51, 22, 37)   ; color:white; }
+.event_progress                  { background: rgb(192, 139, 88); }
+.event_progress1                 { background: rgb(75, 71, 150); color:white }
+.event_progress2                 { background: rgb(247, 200, 189); }
+.event_progress3                 { background: rgb(133, 62, 130); color:white }
+.event_fare_progress             { background: rgb(192, 139, 88); }
+.event_fare_progress1            { background: rgb(75, 71, 150); color:white }
+.event_fare_progress2            { background: rgb(247, 200, 189); }
+.event_fare_progress3            { background: rgb(133, 62, 130); color:white }
+.event_requestend                { background: rgb(6, 62, 78); color:white}
+.event_requeststart              { background: rgb(87, 121, 149); color:white }
+.event_returndbconn              { background: rgb(94, 94, 90)   ; color:black; }
+.event_sqlresults                { background: rgb(128, 0, 255); color:white }
+.event_sqltime                   { background: rgb(0, 128, 255); color:white }
+.event_connaccesstime            { background: rgb(1280, 0, 255); color:white }
+.event_thread                    { background: rgb(175, 71, 204); color:white }
+.event_trace                     { background: rgb(49, 125, 4); color:white}
+.event_url                       { background: rgb(165, 101, 99) ; color:black; }
+.event_usedbconn                 { background: rgb(35, 33, 45)   ; color:black; }
+.event_warning                   { background: rgb(255,255,0); color:black; }
+.event_override_warning          { background: rgb(255,255,0); color:black; }
+.event_wsstart                   { background: rgb(200, 200, 240); }
+.event_xmlin                     { background: rgb(135, 188, 133); color:black; }
+.event_xmlout                    { background: rgb(71, 250, 184); }
+
+
+[class*="payable_"]                { font-size: 10pt; color:black; border-right:1px solid gray; border-bottom: 1px solid gray }
+.payable_Active                                      { background: rgb(255, 202, 202 ); color:black; }
+.payable_Deleted                                     { background: rgb(255, 202, 202 ); color:black; }
+.payable_Pending                                     { background: rgb(237,  91,  54 ); color:white }
+.payable_Pending_Funding                             { background: rgb(237,  91,  54 ); color:white }
+.payable_Zero_Amount_Omit                            { background: rgb(255, 202, 202 ); color:black; }
+.payable_Completed                                   { background: rgb(000, 000, 225 ); color:white; }
+.payable_CCProcessing                                { background: rgb(255, 202, 202 ); color:black; }
+.payable_No_Target_Wallet                            { background: rgb(128, 000, 000 ); color:white; }
+.payable_Hold_Period                                 { background: rgb(180, 180, 180 ); color:black; }
+
+.dPassFuture                                  { color: gray; font-weight:normal }
+.dPassPast                                    { background: rgb(176,229,255) ; color:black; }
+.dPassCurr                                    { background: rgb(255, 255, 145) ; color:black; }
+.invoiceStatusComplete                         { color:green; }
+.invoiceStatusUnPaid                           { color:red; }
+.invoiceStatusPending                          { color: #ff8c00; }
+.invoiceStatusFuture                           { color:gray; }
+
+.invoice_InvalidType                            { background: rgb(111, 33, 42); color:white }
+.invoice_Standard                               { background: rgb(171, 135, 19); }
+.invoice_Acct                                   { background: rgb(255, 255, 0); color:black }
+.invoice_Global                                 { background: rgb(50,50,50); color:white }
+.invoice_Driver_Pass                            { background: rgb(181, 167, 194); }
+.invoice_Test                                   { background: rgb(194, 249, 126); }
+.invoice_Addendum                               { background: rgb(0, 80, 80); color:white }
+.invoice_Trip                                   { background: rgb(0,128,128); color:white }
+.invoice_Tip_Addendum                           { background: rgb(0,250,250); }
+.invoice_Onboarding_Kit                         { background: rgb(59, 87, 165)  ; color:white; }
+.invoice_Trip_No_PreAuth                        { background: rgb(18, 90, 122); color:white }
+.invoice_Background_Check                       { background: rgb(94, 94, 90)   ; color:white; }
+.invoice_Driver_Pass_Restart                    { background: rgb(128, 0, 255); color:white }
+.invoice_V3_Trip                                { background: rgb(0, 128, 255); color:white }
+.invoice_V3_Trip_Partial_Payment                { background: rgb(18, 90, 122); color:white }
+.invoice_V3_Trip_Force_Partial_Payment          { background: rgb(194, 249, 126); color:black }
+.invoice_V3_Driver_Pass                         { background: rgb(175, 71, 204); color:white }
+.invoice_V3_Background_Check                    { background: rgb(49, 125, 4); color:white}
+.invoice_V3_Onboarding_Kit                      { background: rgb(165, 101, 99) ; color:white; }
+.invoice_V3_Tip_Addendum                        { background: rgb(35, 33, 45)   ; color:white; }
+
+.invoice_Background_Check                       { background: rgb(175, 71, 204); color:white }
+
+.dPassStandard                   { background: rgb(225,225, 255); color:black }
+.dPassDriverPause                { background: white; color: rgb(203,96,21); }
+.dPassUnpaidPause                { background: white; color: rgb(139,0,0) }
+.dPassArchived                   { background: rgb(200,200, 200); color:black }
+.dPassRestart                    {background-color:rgb(255,225,225); font-size:14px; font-family: var(--fontCondensed); padding-left:5px; padding-right:5px; border-right: 1px solid rgb(100,100,100); border-bottom: 4px solid black; overflow:hidden; white-space: nowrap;}
+
+.logentrycell                    {font-family: var(--fontCondensed); padding-left:5px; padding-right:5px; border-right: 1px solid rgb(100,100,100); overflow:hidden; white-space: nowrap;}
+.logheader                       {font-family: var(--fontCondensed); font-size:10px; overflow:hidden; white-space: nowrap;}
+.tableheader                     {font-family: var(--fontCondensed); background-color: var(--colorText); text-align:center; color: var(--paletteColor100); font-size:10px; overflow:hidden;}
+.tablerow                        {font-family: var(--fontCondensed); padding-left:5px; padding-right:5px; border: 0px solid rgb(100,100,100) }
+.tablecell                       {font-family: var(--fontCondensed); padding-left:5px; padding-right:5px; border: 0px solid rgb(100,100,100); overflow:hidden; }
+.tablecellWrap                   {font-family: var(--fontCondensed); font-size:12px; padding-left:5px; padding-right:5px; border: 1px solid rgb(100,100,100); }
+.condensed                       {font-family: var(--fontCondensed);}
+
+.historycell                     {padding-left:10px; padding-right:10px; }
+
+.scrolling-wrapper               { padding-bottom:10px; overflow-x: scroll; overflow-y: hidden; white-space: nowrap; }
+.internal                        { font-style:italic; color:green; font-size: 10px }
+.clear                           {clear: both;}
+.expandCollapse                  { float:left; }
+
+.storeFrontProductDescr          { padding:15px 15px 0 15px; font-size:14px; font-weight:normal }
+.storeFrontProductDescrPart2     { margin-bottom:30px;}
+.varSet                          { font-weight:bold; margin-bottom:20px}
+.varValue                        { }
+
+/* JSON Formatting for Logs */
+pre                              {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+.string                          { color: green; }
+.number                          { color: darkorange; }
+.boolean                         { color: blue; }
+.null                            { color: magenta; }
+.key                             { color: red; }
+
+.mapLegend                       { background-color:rgb(230,230,230); border: 3px solid black; margin:20px; padding:10px;}
+.mapLegend span                  { font-size: 20px; font-weight:bold;}
+
+.textCard                        { margin-top: 5%; }
+
+.compactHistory                  { font-size: 10pt }
+
+.bannercontainer                 { display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 2vh; padding-top: 1%; }
+
+[class*="history"]              { font-size: 10pt; color:black }
+.historyAccept                   { background: rgb(204,85,0); color:white }
+.historyAccept2                  { background: rgb(0, 128, 0); color:white }
+.historyApp                      { background: rgb(0, 0, 128); color:white }
+.historyAppState                 { background: rgb(0, 0, 128); color:white }
+.historyCronItem                 { background: rgb(0, 128, 0); color:white }
+.historyCronTask                 { background: rgb(0,0,128); color:white }
+.historyDefault                  { background: rgb(200,200,200); color:black }
+.historyDriver                   { background: rgb(0, 128, 255); color:white }
+.historyError                    { background: rgb(128, 0, 0); color:white }
+.historyFail                     { background: rgb(255, 165, 0); color:black }
+.historyFraud                    { background: rgb(255, 255, 255); color:red }
+.historyJsonIn                   { background: rgb(255, 255, 0); color:black }
+.historyJsonOut                  { background: rgb(100, 0, 100); color:white }
+.historyGateway                  { background: rgb(255, 0, 255); color:black }
+.historyFakeJsonIn               { background: black; color:rgb(255, 255, 0); }
+.historyFakeJsonOut              { background: black; color:rgb(255, 0, 255); }
+.historyKeepAlive                { background: rgb(80, 0, 128); color:white }
+.historyLock                     { background: rgb(128, 0, 255); color:white }
+.historyMessaging                { background: rgb(255, 255, 0); color:black }
+.historyPayment                  { background: rgb(0, 0, 128); color:white }
+.historyPlanning                 { background: rgb(0, 0, 128); color:white }
+.historyRecordCreation           { background: rgb(18, 90, 122); color:white }
+.historyRecordUpdate             { background: rgb(64, 239, 135); color:black}
+.historyRequest                  { background: rgb(175, 71, 204); color:white }
+.historySnapshot                 { background: rgb(0, 128, 128); color:white }
+.historyTrip                     { background: rgb(0, 128, 0); color:white }
+.historyUrl                      { background: rgb(0, 255, 255); color:black }
+.historyUser                     { background: rgb(0, 128, 0); color:white }
+.historyWarning                  { background: rgb(255, 255, 0); color:black }
+.historyWebServices              { background: rgb(6, 62, 78); color:white}
+.historyWebServicesUpdate        { background: rgb(171, 135, 19); color:black }
+.historySuccess                  { background: rgb(0, 128, 0); color:white }
+.historyNeutral                  { background: rgb(64, 64, 64); color:white }
+.historyPending                  { background: rgb(191, 87, 0); color:white }
+.historyExistingPreAuth          { background: rgb(255, 255, 0); color:black }
+.historyPreAuthNew               { background: rgb(171, 135, 19); color:black }
+.historyPreAuthVoid              { background: rgb(237, 91, 54); color:white }
+.historyPreAuthCaptured          { background: rgb(0, 128, 0); color:white }
+
+.ledgerItemPayment               { color: rgb( 0, 128, 0)}
+.ledgerItemReceivable            { color: rgb( 200, 0, 0)}
+.ledgerItemPayable               { color: rgb( 0, 128, 0)}
+.ledgerItemCCProcessing          { color: rgb( 200, 0, 0)}
+.ledgerItemSplitTotal            { color: rgb( 0, 128, 0)}
+.ledgerItemWalletIn              { color: rgb( 0, 128, 0)}
+.ledgerItemWalletOut             { color: rgb( 200, 0, 0)}
+
+.categoryCredit                  { color: rgb( 0, 128, 0)}
+.categoryDebit                   { color: rgb( 200, 0, 0)}
+
+.entryTitle { color: #004cff; font-size: 55px; font-family: var(--fontFancy), cursive; }
+
+.bulletPoints { font-family: var(--fontFancy), cursive; font-size: 28px; }
+
+.homeMapContainer { border: 1px solid black; box-shadow: 0 8px 6px -6px black; }
+
+.h3Line { color: #004cff; font-family: var(--fontFancy); }
+
+.pageTitle                  { margin-left:15px; font-size: 28px; font-weight:bold; padding-bottom: 25px; }
+
+.signUpSignInInner          { width: 100%; height: 100%; background: #005bea; background: -webkit-linear-gradient(bottom, #005bea, #00c6fb); background: -o-linear-gradien(bottom, #005bea, #00c6fb); background: -moz-linear-gradient(bottom, #005bea, #00c6fb); background: linear-gradient(bottom, #005bea, #00c6fb); opacity: 0.9; opacity: .6; /* position: absolute; */ display: flex; justify-content: center; align-items: center; }
+
+.signUpSignInOuter         { width: auto; height: auto; background-image: url(austinSkylkne.jpg); background-repeat: no-repeat; }
+
+.octoImage                 { width: 100%; }
+
+.bottomText                { display: flex; justify-content: center; align-items: center; }
+
+.getStarted                { color: black; font-size: 40px; font-family: var(--fontFancy); }
+
+.getStarted a              { color: blue; text-decoration: underline; cursor: pointer; font-family: var(--fontFancy); }
+
+.schedulebar               { border-top: 1px solid black; border-bottom: 1px solid black; display: flex; justify-content: center; align-items: center; }
+
+.signUpSignInButtonWrapper { display: flex; justify-content: space-evenly;}
+
+.officeWrapper             { margin-left:0 !important; margin-right:0 !important; padding-left: .5rem!important; }
+
+.btn-cal                   { background-color: #004cff; color: white!important; }
+.fileDropTarget            { min-height:100px; border:2px black dashed; background-color:var(--colorContainer1);}
+
+/** CALENDAR/POPPER CSS **/
+
+.TimeSlotPopper            { background: white; border: 1px solid black; transition: all .5s; padding: 10px; width: 50%;  display: none; }
+
+.btn-cal                   { background-color: #004cff; color: white; }
+
+.time                      { font-weight: bold; }
+
+.infoPopper                { background-color: white; border: 1px solid black; transition:  all .5s; padding: 10px; width: 35%; display: none; }
+.popper-row                { vertical-align:top }
+.popper-data               { padding-bottom:5px; }
+
+.confirm-delete-popper     { background-color: white; border: 1px solid black; transition:  all .5s; padding: 10px; width: 25%; display: none; }
+
+.createNewSchedulePopper   { width: 55%;  display: none; }
+
+.disclaimer { padding: 1.5em; background-color: yellow; border: 1px solid black; }
+
+@media (min-width: 200px) and (max-width: 768px) {
+   .TimeSlotPopper { width: 85%; }
+
+   .infoPopper { width: 85%; }
+
+   .confirm-delete-popper { width: 85%; }
+
+   .createNewSchedulePopper { width: 85%; }
+}
+.shaded                    {background-color: #b0b0b0; }
+
+.swal-button                           { font-size: 15px; font-weight: bold; text-decoration:none; border: 0px; border-radius:25px; color: var(--colorButtonText); background-color: var(--colorButton); }
+.swal-button:hover                     { background-color:var(--colorButtonHover); color:var(--colorButtonHoverText);}
+.swal-button:disabled                  { background-color:var(--colorButtonHover); color:var(--colorButtonHoverText);}
+.swal-button:active                    { background-color:var(--colorButtonClick); color:var(--colorButtonClickText);}
+.swal-button:visited                   { var(--colorButton); }
+.swal-modal                            { border:radius:10px }
+.swal-content                          { font-size: medium; font-weight: bold; }
+
+.video1                                { border: 2px solid rgb(80,80,80); box-shadow: 3px 3px 5px 6px rgb(80, 80, 80, .4); border-radius:15px; }
+
+.defaultViewButton                     { padding:5px; padding-right:10px; margin-right:10px; border-radius:5px; border: 1px solid rgb(0,0,128);}
+.view1Button                           { padding:5px; padding-right:10px; margin-right:10px; border-radius:5px; border: 1px solid rgb(0,0,128); background-color:rgb(0,128,0); color:white;}
+.view2Button                           { padding:5px; padding-right:10px; margin-right:10px; border-radius:5px; border: 1px solid rgb(0,0,128); background-color:rgb(204,85,0); color:white;}
+.view3Button                           { padding:5px; padding-right:10px; margin-right:10px; border-radius:5px; border: 1px solid rgb(0,0,128); background-color:rgb(128,0,0); color:white;}

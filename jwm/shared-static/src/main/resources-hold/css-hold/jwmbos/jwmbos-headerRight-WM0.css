@@ -1,0 +1,34 @@
+/* nextViewCtrl=W;  sectionCtrl=M;  sectionAtAGlance=0; */
+
+.headerRightWM0 [class*="sectionAtAGlance"]      { display:none; }
+
+/* mobile */
+
+.headerRightWM0 [class*="nextViewCtrl"]          { float:left; width:100%; }
+.headerRightWM0 [class*="sectionCtrl"]           { width:100% }
+
+@media only screen and (min-width: 400px) /* medium size phone */
+{
+   .headerRightWM0 [class*="nextViewCtrl"]          { float:left; width:100%; }
+   .headerRightWM0 [class*="sectionCtrl"]           { width:100% }
+}
+@media only screen and (min-width: 600px) /* tablet */
+{
+   .headerRightWM0 [class*="nextViewCtrl"]          { float:left; width:100%; }
+   .headerRightWM0 [class*="sectionCtrl"]           { width:100% }
+}
+@media only screen and (min-width: 800px) /* desktop */
+{
+   .headerRightWM0 [class*="nextViewCtrl"]          { float:left; width:50%; }
+   .headerRightWM0 [class*="sectionCtrl"]           { width:40% }
+}
+@media only screen and (min-width: 1200px) /* full screen */
+{
+   .headerRightWM0 [class*="nextViewCtrl"]          { float:left; width:50%; }
+   .headerRightWM0 [class*="sectionCtrl"]           { width:40% }
+}
+@media only print /* for printing of pages */
+{
+   .headerRightWM0 [class*="nextViewCtrl"]          { float:left; width:50%; }
+   .headerRightWM0 [class*="sectionCtrl"]           { width:40% }
+}

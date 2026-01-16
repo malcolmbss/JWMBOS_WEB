@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>jwm</groupId>
+        <artifactId>jwm</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>calendar</artifactId>
+    <packaging>war</packaging>
+    <name>calendar</name>
+
+
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>deploy-war</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <echo>Deploying ${project.name} (${project.build.directory}/${project.build.finalName}.war) to http://${domain.url}/manager/text/deploy?path=/${project.name}&amp;update=true</echo>
+                                <exec executable="curl">
+                                    <arg value="-u" />
+                                    <arg value="${TomcatAdminCredentials}" />
+                                    <arg value="--fail" />
+                                    <arg value="--show-error" />
+                                    <arg value="--silent" />
+                                    <arg value="--upload-file" />
+                                    <arg value="${project.build.directory}/${project.build.finalName}.war" />
+                                    <arg value="http://${domain.url}/manager/text/deploy?path=/${project.name}&amp;update=true" />
+                                </exec>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project> 

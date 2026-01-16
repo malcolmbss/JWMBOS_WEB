@@ -1,0 +1,146 @@
+:root
+{
+   --textShadow:                  var(--colorShadow) 1px 1px 0px;
+   --dropShadow:                  0 0 0 var(--colorShadow);
+   --dropShadowMin:               0 0 0 var(--colorShadow);
+   --noBorder:                    0px;
+   --border:                      var(--colorBorder) 2px solid ;
+}
+
+*                                { box-sizing: border-box; }
+h1, h2, h3, h4, h5, h6           { line-height: 150%; }
+h1                               { font-size:36px; }
+h2                               { font-size:28px; }
+h3                               { font-size:22px; }
+h4                               { font-size:18px; }
+h5                               { font-size:12px; }
+
+.regions                         { }
+.regions h4                      {color:blue; margin:10px 2px 0px 2px;}
+
+.sectionTitle                    { padding:0px; margin:0px; font-size: 18px; font-weight:bold;}
+.sectionTitle2                   { padding:0px; margin:0px; font-size: 14px; font-weight:bold;}
+.sectionTitle2a                  { padding:0px 0px 0px 2px; margin:0px; font-size: 16px; font-weight:bold;}
+.sectionTitle3                   { padding:0px; margin:0px; font-size: 12px; font-weight:bold;}
+.sectionTitle4                   { padding:0px; margin:0px; font-size: 10px; font-weight:bold;}
+.sectionTitleM                   { padding:0px; margin:0px; font-size: 14px; font-weight:bold;}
+.sectionTitleL                   { padding:0px; margin:0px; font-size: 20px; font-weight:bold;}
+.sectionTitleAlt                 { padding:0px; margin:0px; font-size: 22px; margin-bottom: 10px;}
+
+[class*="sectionH1"]             { padding:0px; margin:0px; font-size: 36px; }
+[class*="sectionH2"]             { padding:0px; margin:0px; font-size: 28px; }
+[class*="sectionH3"]             { padding:0px; margin:0px; font-size: 20px; }
+[class*="sectionH4"]             { padding:0px; margin:0px; font-size: 18px; }
+[class*="sectionH5"]             { padding:0px; margin:0px; font-size: 14px; }
+.alt-th                          { text-align:center; }
+.autoWidth                       { width:auto; }
+.bannerBase                      { width: 100%; padding:0px 0px 15.36% 0px; }
+.bottomBarBase                   { width: 100%; padding:15px; }
+.bottomborder                    { padding: 5px; }
+.buttonBase                      { width:100%; clear:both; margin-left:10px; margin-top:10px; text-align:center;  cursor: pointer; cursor: hand; color: var(--colorButtonText); background-color: var(--colorButton); }
+.buttonBase                      { width:100%; clear:both; margin-left:10px; margin-top:10px; text-align:center;  cursor: pointer; cursor: hand; color: var(--colorButtonText); }
+.containerBase                   { position:relative; width: 1100px; min-height:550px; margin: 0 auto; padding:10px}
+.containerprint                  { width: 1100px; background: url(/images/white.gif) ; margin: 0 auto; padding: 0; display: table; }
+.devOverlayBase                  { width:30%; float:right; padding-top:3%; }
+.fixedHeight                     { height:300px }
+.flowCell                        { width:33%; padding-right:3px; }
+.flowCell2                       { width:33%; text-align:center; vertical-align:middle;}
+.flowHeader                      { width:33%; vertical-align:top; padding:10px 5px 25px 5px; }
+.flowHeader2                     { width:33%; text-align:center; vertical-align:middle;}
+.footerBase                      { height: 35px; width: 960px; margin: 0 auto; padding-top: 15px; }
+.footerContainer                 { height: 35px; width: 960px; margin: 0 auto; padding-top: 15px; }
+.footerContainerBase             { width: 100%; font-size: 11px; }
+.galleryItem                     { padding:2px; display:inline-block; margin:5px; text-align:center; }
+.galleryItemSelected             { padding:2px; display:inline-block; margin:5px; text-align:center; }
+.gallerySelectionList            { padding:5px; margin:0px; }
+.hidden                          { display:none; }
+.hiddenAllowClose                { display:none; }
+.hrBase                          { height: 3px; }
+.innerFrame                      { position:relative; }
+.leadFormPad                     { padding: 10px 2px 0px 2px }
+.lightBoxScreen                  { position:fixed; left:0px; top:0px; width:100%; height:100%; z-index:1; -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=50)'; filter:alpha(opacity=50); }
+.login                           { }
+.login button                    { margin-top:15px; width: 100%; cursor: pointer; padding: 10px; font-size: 13px; }
+.login fieldset                  { margin-bottom: 20px; padding: 0; }
+.login input                     { padding: 10px; width: 300px; }
+.dbgTxt                          { font-size:9px; }
+.login label                     { display:block; }
+.login legend                    { margin-bottom: 5px; font-size: 13px; font-weight: normal; }
+.login ul                        { list-style-type: none; margin: 0; padding: 0; }
+.logoBannerBase                  { width:100%; padding:0px; margin:0px }
+.logoffButton                    { display:inline-block }
+.marginTop                       { margin-top:15px; }
+.mediumFont                      { font-size:12px; line-height:16px; }
+.mediumPrompt                    { font-size: 15px; }
+.tinyPrompt                      { font-size: 10px; line-height:12px; margin-left:5px;}
+.tinyfont                        { font-size: 9px; }
+.smallfont                       { font-size: 11px; }
+.italics                         { font-style:italic; }
+.mediumWidthContainer            { width:650px; margin: 0 auto;}
+.narrow                          { width:50%;}
+.narrowMargin                    { margin:2px; }
+.jwmbos-row::after               { content: ""; clear: both; display: table; }
+.searchInput                     { margin-left: 15px; width: 80px; padding: 3px; }
+.sectionInner                    { display:inline; }
+.sectionOuter                    { display:block; clear:both; padding-bottom:10px }
+.sectionOuterWPad                { display:block; clear:both; padding:3px; }
+.sectionOuterImageBlock          { display:inline-flex; margin:7px; text-align:center; padding-bottom:10px; }
+.sectionOuterNoClear             { display:block; padding-bottom:10px;}
+.separator                       { margin: 5px 1% 25px 1%; padding-bottom:5px; width:98%; }
+.socialmedia                     { width:40px; margin: 0px 30px 0px 30px; display: inline-block; }
+.topborder                       { padding: 5px; }
+.vCompress                       { padding: 0px 5px 0px 5px; }
+.video-responsive                { overflow:hidden; padding-bottom:56.25%; position:relative; height:0; margin-bottom: 15px; }
+.video-responsive iframe         { left:0; top:0; height:100%; width:100%; position:absolute; }
+.video-responsive video          { left:0; top:0; height:100%; width:100%; position:absolute; }
+.visibleoverflow                 { overflow:visible; }
+.vscroll                         { overflow-y:scroll; }
+.mb25                            { margin-bottom:25px }
+th                               { text-align:center; }
+th span                          { -moz-transform: rotate(-75deg); -o-transform: rotate(-75deg); -ms-transform: rotate(-75deg); -webkit-transform: rotate(-75deg); transform: rotate(-75deg);  }
+.rotate                          { width:100px; text-align:left; padding-left:10px; -moz-transform: rotate(-75deg); -o-transform: rotate(-75deg); -ms-transform: rotate(-75deg); -webkit-transform: rotate(-75deg); transform: rotate(-75deg);  }
+.sectionThumbnail                { font-size:8px; max-width:100px; }
+.sectionThumbnailWrapper         { text-align:center; vertical-align:middle; -width:100%; display:none; clear:both }
+[class*="viewicon"]              { }
+.viewiconinactive                { cursor:pointer; cursor:hand }
+
+.viewIconStyle2                  { display:inline-block; margin-right:10px; font-size:20px }
+.viewiconinactive2               { color:black; cursor:pointer; cursor:hand }
+.viewiconactive2                 { color:blue }
+
+.nextViewIconClass               { display: inline-block;}
+.center                          { text-align:center; }
+.refreshIconClass                { cursor:pointer; cursor:hand; width:20px;padding-left:5px; padding-right:7px; }
+.expClass                        { display:table-cell;width:20px; vertical-align:top; cursor:pointer; cursor:hand;}
+
+[class*="deeppad"]               { padding:30px; }
+[class*="nopad"]                 { padding:2px; }
+.medPad                          { padding:5px; }
+.buttonClass                     { padding:3px 10px 3px 10px; margin:10px 5px 15px 5px; text-align:center; border-radius: 5px; }
+.buttonClassL                    { font-size: 22px; border-radius: 24px; padding: 15px; margin-top: 22px; margin-left:0}
+.buttonClassM                    { font-size: 16px; border-radius: 10px; padding: 8x; margin-top: 15px; margin-left:0}
+.buttonClassS                    { font-size: 10px; border-radius: 5px; padding: 0; margin:0}
+.buttonClassCompact               { padding:3px 10px 3px 10px; text-align:center; border-radius: 5px; }
+.buttonFontL                     { font-size: 25px; }
+.buttonNoTopMargin               { margin-top: 0; }
+
+fieldset                         { margin-top:10px; padding:10px; border:3px solid #4238ca; background:#e8e8e8; }
+.compact                         { margin: 0 0 0 0; padding: 0 0 0 0; }
+.compactH                        { margin-right:0px; margin-left:0px; padding-right:0px; padding-left:0px; }
+.compactV                        { margin-top:0px; margin-bottom:0px; padding-top:0px; padding-bottom:0px; }
+.compressV                       { padding-top:0px; padding-bottom:0px; }
+
+.miscHeaderContentClass          { clear:both; display:none; width:100%;}
+.fullWidth                       { width:100%; }
+.vertical-align-top              { vertical-align:top;}
+
+.indent                          { margin-left:10px; }
+
+.forgotPassword { display: flex; justify-content: center; align-items: center; }
+
+.forgotPassword a { color: black;}
+
+.forgotPassword a:hover { transform: scale(1.2); color: white; cursor: pointer; }
+.width50                         { width:50% }
+
+.border2pxBlack                  { border: 2px solid black;}

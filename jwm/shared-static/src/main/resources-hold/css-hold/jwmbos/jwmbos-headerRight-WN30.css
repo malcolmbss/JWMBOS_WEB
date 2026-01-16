@@ -1,0 +1,38 @@
+/* nextViewCtrl=W;  sectionCtrl=N;  sectionAtAGlance=30px fixed; */
+
+/* mobile */
+
+.headerRightWN30 [class*="nextViewCtrl"]          { float:left; width:100%; }
+.headerRightWN30 [class*="sectionCtrl"]           { width: calc(100% - 30px); }
+.headerRightWN30 [class*="sectionAtAGlance"]      { display:inline-block; width:30px; }
+
+@media only screen and (min-width: 400px) /* medium size phone */
+{
+   .headerRightWN30 [class*="nextViewCtrl"]          { float:left; width:100%; }
+   .headerRightWN30 [class*="sectionCtrl"]           { width: calc(100% - 30px);  }
+.headerRightWN30 [class*="sectionAtAGlance"]         { display:inline-block; width:30px; }
+}
+@media only screen and (min-width: 600px) /* tablet */
+{
+   .headerRightWN30 [class*="nextViewCtrl"]          { float:left; width:100%; }
+   .headerRightWN30 [class*="sectionCtrl"]           { width: calc(100% - 30px);  }
+.headerRightWN30 [class*="sectionAtAGlance"]         { display:inline-block; width:30px; }
+}
+@media only screen and (min-width: 800px) /* desktop */
+{
+   .headerRightWN30 [class*="nextViewCtrl"]          { float:left; width:50%; }
+   .headerRightWN30 [class*="sectionCtrl"]           { width: calc(49% - 30px); }
+.headerRightWN30 [class*="sectionAtAGlance"]         { display:inline-block; width:30px; }
+}
+@media only screen and (min-width: 1200px) /* full screen */
+{
+   .headerRightWN30 [class*="nextViewCtrl"]          { float:left; width:50%; }
+   .headerRightWN30 [class*="sectionCtrl"]           { width: calc(49% - 30px); }
+.headerRightWN30 [class*="sectionAtAGlance"]         { display:inline-block; width:30px; }
+}
+@media only print /* for printing of pages */
+{
+   .headerRightWN30 [class*="nextViewCtrl"]          { float:left; width:50%; }
+   .headerRightWN30 [class*="sectionCtrl"]           { width: calc(49% - 30px); }
+.headerRightWN30 [class*="sectionAtAGlance"]         { display:inline-block; width:30px; }
+}

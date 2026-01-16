@@ -1,0 +1,5 @@
+/* nextViewCtrl=0;  sectionCtrl=W;  sectionAtAGlance=0; */
+
+.headerRight0W0 [class*="sectionAtAGlance"]      { display:none; }
+.headerRight0W0 [class*="nextViewCtrl"]          { display:none; }
+.headerRight0W0 [class*="sectionCtrl"]           { width:100% }

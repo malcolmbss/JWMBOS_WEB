@@ -1,0 +1,433 @@
+*{
+        box-sizing: border-box;
+}
+body{
+    font-size: 13px;
+        color: #000D0D;
+}
+h1{
+        font-size: 42px;
+        font-weight: bold;
+        color: #ffffff;
+}
+h4{
+    font-size: 21px;
+    font-weight: bold;
+}
+button:active,
+button:focus {
+        outline: none;
+}
+button::-moz-focus-inner {
+        border: 0;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+a:hover{
+    text-decoration: none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+
+/*navigation*/
+header .container,
+footer .container{
+    max-width: 1166px;
+    width: 100%;
+    margin: 0 auto;
+}
+header .container{
+    padding: 0 75px;
+}
+header .logo{
+    max-width: 108px;
+    width: 100%;
+}
+.menu{
+    display: block;
+    text-align: right;
+}
+.menu li{
+    display: inline-block;
+}
+.menu a{
+    color: #414141;
+    display: block;
+    padding: 40px 20px;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+.menu a i{
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+.menu a:hover{
+    color: #004CFF;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+}
+.menu .menu_hover{
+    position: relative;
+}
+.menu .submenu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    text-align: left;
+    padding: 0 0 17px 0;
+    background: #fff;
+    width: 200%;
+    display: none;
+    z-index: 99999;
+}
+.menu .submenu li{
+    display: block;
+}
+.menu .submenu li a{
+    padding: 12px 0 0 20px;
+}
+.menu a:hover .menu_arrow{
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
+.title .container-fluid{
+    height: 100vh;
+    background-image: url("https://s3.amazonaws.com/wridz.com/images/system/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.title .row,
+.s111ign_in .row,
+.sign_up .row{
+    height: 100%;
+}
+.title h1{
+    margin-bottom: 34px;
+}
+.title a{
+    max-width: 176px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    background: #fff;
+    padding: 15px;
+    color: #004CFF;
+    border-radius: 25px;
+    font-size: 12px;
+    margin: 15px 20px;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+.title a:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.active{
+/*  color: #004CFF !important; ################################################### JWM 5/12/20 for query-builder AND/OR button */
+}
+footer .container{
+    padding-top: 28px;
+    padding-bottom: 29px;
+}
+footer span{
+    font-size: 12px;
+    color: #414141;
+}
+
+/*sign-in.html*/
+.sign_in .container-fluid{
+    background-image: url("https://s3.amazonaws.com/wridz.com/images/system/sign_in-up_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.s111ign_in form,
+.sign_up form{
+/*  max-width: 286px;  */
+    width: 100%;
+    margin: 0 auto;
+}
+.s111ign_in form h4,
+.sign_up form h4{
+    color: #fff;
+    margin-bottom: 27px;
+}
+.s111ign_in form input,
+.sign_up form input{
+    background: #fff;
+    border-radius: 10px;
+    padding: 12px 40px 13px;
+    opacity: 0.5;
+    font-size: 14px;
+    font-weight: 100;
+    width: 100%;
+    border: 0;
+}
+.s111ign_in form .form_email{
+    margin: 17px 0;
+}
+.s111ign_in form button,
+.sign_up form button{
+    background: #2D6CFF;
+    color: #fff;
+    font-weight: 100;
+    font-size: 12px;
+    border-radius: 24px;
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    margin-top: 22px;
+}
+.s111ign_in form button{
+    margin-bottom: 104px;
+}
+.s111ign_in .sign_up_link,
+.sign_up .s111ign_in_link{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+}
+.s111ign_in .forgot_password{
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 100;
+    color: #fff;
+    opacity: 0.8;
+}
+.s111ign_in form .password_wrap{
+    position: relative;
+}
+.s111ign_in form .password_img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    right: 20px;
+}
+.sign_up .container-fluid{
+    background-image: url("https://s3.amazonaws.com/wridz.com/images/system/sign_in-up_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.sign_up form button{
+    margin-bottom: 163px;
+}
+
+/*home.html*/
+.dashboard .container{
+    background-color: #fafafa;
+    padding: 0;
+    min-height: 100vh;
+}
+.dashboard .address_bar{
+    color: #B0B0B0;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 16px;
+}
+.dashboard h4{
+    font-weight: normal;
+}
+.navigation_panel{
+    background: #fff;
+    padding-top: 30px;
+    padding-bottom: 250px;
+}
+.dashboard .dashboard_inf{
+    padding: 19px 45px;
+}
+/*home.html -> office -> admin*/
+header h4{
+    display: inline-block;
+    color: #E2E2E2;
+    font-size: 13px;
+    font-weight: normal;
+}
+.office-admin .office-admin_panel {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+    background: #FFF;
+}
+
+.office-admin .block_name {
+    cursor: pointer;
+    display: block;
+    padding: 20px 0;
+    color: #272727;
+    font-size: 14px;
+    position: relative;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.office-admin li i {
+    font-size: 16px;
+    color: #E2E2E2;
+    margin: 0 15px;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.office-admin li img{
+    margin: 0 15px;
+    width: 16px;
+    display: inline-block;
+}
+.office-admin .block_name:hover{
+    color: #004CFF;
+}
+.office-admin li.open .block_name,
+.office-admin li.open i{
+    color: #004CFF;
+}
+.office-admin li.open i.fa-angle-down {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.office-admin .office-admin-sub {
+    display: none;
+    font-size: 14px;
+}
+.office-admin .office-admin-sub a {
+    display: block;
+    text-decoration: none;
+    color: #272727;
+    padding-left: 50px;
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+.dashboard .dashboard_inf .d_inf{
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(238,238,238,1);
+    -moz-box-shadow: 0px 0px 6px 0px rgba(238,238,238,1);
+    box-shadow: 0px 0px 6px 0px rgba(238,238,238,1);
+    border-radius: 5px;
+    padding: 15px 20px 0 20px;
+    max-width: 456px;
+    width: 100%;
+}
+.dashboard_inf .dashboard_panel{
+    width: 100%;
+    background: #FFF;
+}
+.dashboard_inf .block_name {
+    cursor: pointer;
+    display: block;
+    padding-bottom: 16px;
+    color: #272727;
+    font-size: 13px;
+    position: relative;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.viewSelect li i {
+    font-size: 15px;
+    color: #E2E2E2;
+    padding-right: 10px;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.dashboard_inf .block_name .block_name_title{
+    width: 70%;
+    display: inline-block;
+}
+.dashboard_inf .block_name .list_icon,
+.dashboard_inf .block_name .map_icon,
+.dashboard_inf .block_name .pencil_icon{
+    display: inline-block;
+    width: 9%;
+    cursor: pointer;
+    text-align: center;
+}
+.dashboard_inf .block_name:hover{
+    color: #004CFF;
+}
+.viewSelect li.open .block_name,
+.viewSelect li.open .change_color{
+    color: #004CFF;
+}
+.dashboard_inf .dashboard_panel-sub{
+    display: none;
+}
+.dashboard_inf .dashboard_panel-sub a{
+    display: block;
+    text-decoration: none;
+    color: #272727;
+    padding-left: 31px;
+    padding-bottom: 17px;
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+.dashboard_inf .number{
+    color: #E2E2E2;
+    font-size: 13px;
+    font-weight: 100;
+}
+
+
+
+@media only screen and (max-width : 1660px){
+}
+@media only screen and (max-width : 1450px){
+}
+@media only screen and (max-width : 1200px){
+}
+@media only screen and (max-width : 1140px){
+}
+@media only screen and (max-width : 1050px){
+}
+@media only screen and (max-width : 992px){
+}
+@media only screen and (max-width : 920px){
+}
+@media only screen and (max-width : 900px){
+}
+@media only screen and (max-width : 858px){
+}
+@media only screen and (max-width : 768px){
+.menu{
+    text-align: center;}
+}
+@media only screen and (min-width : 768px){
+}
+@media only screen and (max-width : 575px){
+}
+@media only screen and (max-width : 450px){
+}

@@ -1,0 +1,39 @@
+/* nextViewCtrl=N;  sectionCtrl=N;  sectionAtAGlance=M; */
+
+.headerRightNNM [class*="sectionAtAGlance"]      { display:inline-block; }
+
+/* mobile */
+.headerRightNNM [class*="nextViewCtrl"]          { display:inline-block; float:left; width:85%; }
+.headerRightNNM [class*="sectionCtrl"]           { display:inline-block; width:13% }
+.headerRightNNM [class*="sectionAtAGlance"]      { display:inline-block; width:100% }
+
+@media only screen and (min-width: 400px) /* medium size phone */
+{
+   .headerRightNNM [class*="nextViewCtrl"]          { float:left; width:75%; }
+   .headerRightNNM [class*="sectionCtrl"]           { width:23% }
+   .headerRightNNM [class*="sectionAtAGlance"]      { width:100% }
+}
+@media only screen and (min-width: 600px) /* tablet */
+{
+   .headerRightNNM [class*="nextViewCtrl"]          { float:left; width:75%; }
+   .headerRightNNM [class*="sectionCtrl"]           { width:23% }
+   .headerRightNNM [class*="sectionAtAGlance"]      { width:100% }
+}
+@media only screen and (min-width: 800px) /* desktop */
+{
+   .headerRightNNM [class*="nextViewCtrl"]          { float:left; width:20%; }
+   .headerRightNNM [class*="sectionCtrl"]           { width:15% }
+   .headerRightNNM [class*="sectionAtAGlance"]      { width:63% }
+}
+@media only screen and (min-width: 1200px) /* full screen */
+{
+   .headerRightNNM [class*="nextViewCtrl"]          { float:left; width:20%; }
+   .headerRightNNM [class*="sectionCtrl"]           { width:15% }
+   .headerRightNNM [class*="sectionAtAGlance"]      { width:63% }
+}
+@media only print /* for printing of pages */
+{
+   .headerRightNNM [class*="nextViewCtrl"]          { float:left; width:20%; }
+   .headerRightNNM [class*="sectionCtrl"]           { width:15% }
+   .headerRightNNM [class*="sectionAtAGlance"]      { width:63% }
+}

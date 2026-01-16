@@ -1,0 +1,15 @@
+.border1  { border: 2px solid black }
+.border2  { border: 2px solid red   }
+.border3  { border: 2px solid green }
+.border4  { border: 2px solid brown }
+.border5  { border: 2px solid blue  }
+.border6  { border: 2px solid cyan  }
+.border7  { border: 2px solid orange}
+.border8  { border: 2px solid yellow}
+.border9  { border: 2px solid rgb( 128,128,128) }
+.border10 { border: 2px solid rgb( 255,128,128) }
+
+/* [class*="jwmbos-col-"]                                                                       { border: 2px solid blue; }   */
+/* [class*="jwmbos-col-"] [class*="jwmbos-col-"]                                                { border: 2px solid green; }  */
+/* [class*="jwmbos-col-"] [class*="jwmbos-col-"] [class*="jwmbos-col-"]                         { border: 2px solid yellow }  */
+/* [class*="jwmbos-col-"] [class*="jwmbos-col-"] [class*="jwmbos-col-"]  [class*="jwmbos-col-"] { border: 2px solid cyan }    */

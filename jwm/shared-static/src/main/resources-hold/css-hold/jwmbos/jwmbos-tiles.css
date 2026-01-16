@@ -1,0 +1,25 @@
+.tiles_wrapper          { vertical-align:top; display:inline-block; padding:5px; margin: 0 auto 20px; max-width: 1000px; }
+.tiles_wrapper2         { position:relative; overflow:hidden; background-color: var(--paletteColor100); display:inline-block; width:225px; height:375px; margin:0px 7px 7px 0px; vertical-align:top; padding:5px;}
+.tiles_wrapper3         { position:relative; overflow:hidden; background-color: var(--paletteColor202); display:inline-block; width:275px; height:325px; margin:0px 7px 7px 0px; vertical-align:top; padding:5px;}
+.tiles_wrapper4         { position:relative; overflow:hidden; background-color: var(--paletteColor202); display:inline-block; width:325px; height:390px; margin:0px 7px 7px 0px; vertical-align:top; padding:5px;}
+.tile                   { cursor:pointer; cursor:hand; vertical-align:top; background-color: var(--colorTile); color: var(--colorTileText); border-radius: 10px; box-shadow: 0 10px 20px rgba(198, 198, 198, 1); color: #666; display: inline-block; height: 150px; margin: 10px; padding: 10px; text-decoration: none; transition: all 0.5s ease 0s; width: 200px; }
+.tile:hover             { border: 2px solid var(--paletteColorText); transition: all 0.1s ease 0s; }
+.tile h2, .tile h2 a    { font-size: 13px; letter-spacing: 1px; line-height: 17px; margin: 0; padding: 0; }
+.tile_image             { cursor:pointer; cursor:hand; margin: 0 0 7px 0; height: 100px; max-width: 160px; }
+.read-more              { color: var(--paletteColor1); font-size:11px; position: absolute; height:50px; bottom: 0px; width: 100%; text-align: right; margin: 0; padding: 40px 15px 15px 0; background-image: linear-gradient(to bottom, transparent, var(--paletteColor100) ); }
+.read-more2             { font-size:11px; position: absolute; height:50px; bottom: 0px; width: 100%; text-align: right; margin: 0; padding: 40px 15px 15px 0;
+                          background: linear-gradient(to bottom, var(--paletteColor202t), var(--paletteColor202o));
+                          background: -moz-linear-gradient(top, var(--paletteColor202t), var(--paletteColor202o));
+                          background: -webkit-linear-gradient(top, var(--paletteColor202t), var(--paletteColor202o));
+                          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--paletteColor202t)', endColorstr='var(--paletteColor202o)');  }
+.read-more3             { font-size:11px; position: absolute; height:50px; bottom: 0px; width: 100%; text-align: right; margin: 0; padding: 40px 15px 15px 0; }
+.tilePrompt             { font-size: 13px;}
+.tileIcon               { margin-top:5px; width:50%; }
+.tileButton             { color:black; background-color:white; border-radius:10px; position:relative; }
+
+.tile [class*="inputPrompt"] { display:none }
+.tile [class*="inputData"]   { width:100%; height:100%; display:flex; align-items:center}
+.tile [class*="dataLayers"]  { width:100%; }
+.tile .inputSuffix           { display:none; }
+.tile .inputMsg              { display:none; }
+.tileBadge              { background-color: #fa3e3e; border-radius: 2px; color: white; padding: 1px 3px; font-size: 10px; position: absolute; top: -20px; right: 10px };

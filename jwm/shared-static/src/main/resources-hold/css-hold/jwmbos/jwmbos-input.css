@@ -1,0 +1,384 @@
+/* Appearance and Global Layout */
+
+.sliderRWClass                   { margin-top:5px; width:99%; font-size: 15px; padding:2px; }
+.inputBase                       { padding: 3px}
+.inputError                      { color:red; padding:4px; font-size:10px; line-height:10px; background-color: var( --colorInput );}
+.inputToggle                     { float:left; margin-right: 3px; display:inline-block; vertical-align:top; }
+.inputToggleHidden               { float:left; margin-right: 3px; display:none; vertical-align:top; }
+.inputWrapper                    { margin-bottom:3px; vertical-align:top; padding-left:0px; padding-right:0px;  }
+.checkboxWrapper                 { margin-bottom:25px; vertical-align:top; float:right; width:50%; text-align:right }
+.inputSeparator                  { margin-bottom:25px; }
+.stdInput                        { width:100%; }
+.wizardInput                     { width: 100%; background-color: white; }
+.stdInputWithIcon                { width:75%; }
+.stCheckbox                      { }
+.roDataClass                     { }
+.roDivClass                      { width:100%; }
+.roFixed                         { width:15ex; }
+.rwDivClass                      { width:100%; }
+.disabled                        { opacity: 0.4 }
+.blue                            { color:blue; }
+.redBold                         { color:red; font-weight:bold; }
+.greenBold                       { color:green; font-weight:bold; }
+
+input[type="checkbox"] .checkboxSmall { text-align:left; width:12px; height:12px}
+input[type="checkbox"] .stdCheckbox   { width:25px; height:25px; }
+
+input[type="radio"]              { width:25px; height:25px; }
+
+.inputDataTable                  { width:35%; display:table-cell;   vertical-align:top; padding-left:5px; padding-right:5px;  }
+
+.radioButton                     {float: left; padding: 1%; width:30px; height:30px; vertical-align:top;}
+.radioButtonPrompt               {font-family: var(--fontSecondary); font-size:15px; font-weight:normal; margin-left:10px; float: left; padding: 1%; width:20%;}
+.radioButtonLabel                {font-family: var(--fontSecondary); font-size:12px; font-weight:normal; }
+
+[class*="inputPrompt"]           { display:inline-block; font-weight:bold; font-size:16px; padding-left:5px; padding-right:5px; }
+.inputPromptS                    { font-size:12px; }
+.inputPromptM                    { font-size:14px; }
+.inputPromptL                    { font-size:20px; }
+.inputPromptPriority             { font-size:20px; font-weight:bold; color:red}
+.verticalAlignBottom             { vertical-align:bottom;}
+[class*="inputData"]             { font-size:14px; display:inline-block; vertical-align:bottom; padding-left:5px; padding-right:5px; min-width:35px }
+[class*="inputInheritance"]      { display:none; vertical-align:bottom; padding-left:5px; padding-right:5px; min-width:35px }
+.inputDataS                      { font-size:12px; }
+.inputDataM                      { font-size:18px; }
+.inputDataL                      { font-size:22px; background: #c0c0c0; border-radius: 10px; padding: 5px 10px 5px 10px; }
+.inputDataLSignIn                { font-size:22px; background: #f1f1f1; border-radius: 10px; padding: 5px 10px 5px 10px; border: 1px solid black; }
+.inputTextL                      { font-size:22px; }
+.inputTextXL                     { font-size:15px; }
+.inputDataXL                     { font-size:15px; }
+[class*="dataLayers"]            { vertical-align:bottom; min-width:35px; position:relative} /* relative required to anchor absolute pos for busy icon */
+.inputMsg                        { margin-top:5px; display:none; padding-left:8px; background-color:var( --paletteColor101 );}
+.inputSuffix                     { font-family: var(--fontSecondary); font-weight:normal; display:inline-block; font-size:12px; font-style:italic;}
+.borderSm                        { border: 2px black solid; }
+.shaded                          { background-color:var( --paletteColor106 );}
+
+::placeholder            { /* Chrome, Firefox, Opera, Safari 10.1+ */ color: rgb(99,99,99); opacity: 1; /* Firefox */ }
+:-ms-input-placeholder   { /* Internet Explorer 10-11 */ color: rgb(99,99,99); }
+::-ms-input-placeholder  { /* Microsoft Edge */ color: rgb(99,99,99); }
+
+.topPad                          { padding-top:7px;}
+
+.requiredIndicator               { width:10px; vertical-align:top;}
+.cancel-input                    { float:right; position:relative; top:-16px; right:5px; width:15px; cursor:pointer; cursor:hand;}
+.undoButton                      { float:right; vertical-align:top; width:15px; cursor:pointer; cursor:hand;}
+.helpButton                      { float:right; vertical-align:top; width:20px; cursor:pointer; cursor:hand;}
+.ajax-loader                     { }
+.defaulttextarea                 { width:100%; height:150px }
+                                               e
+
+.ui-slider-handle                { -ms-touch-action: none; touch-action: none; }
+
+.width80                         {width:80%;}
+.padding0                        { padding: 0}
+
+.radioButtonSep                  {float: left; padding: 1%; width:5%; height:24px;}
+
+/* Layout A -- 50/50 */
+
+.inputLayoutA                        { display:block }
+.inputLayoutA [class*="inputPrompt"] { width:48% }
+.inputLayoutA [class*="inputData"]   { width:48% }
+.inputLayoutA [class*="dataLayers"]  { width:70% }
+.inputLayoutA .inputSuffix           { width:49% }
+.inputLayoutA .inputMsg              { width:98% }
+
+.inputLayoutA1                        { display:block }
+.inputLayoutA1 [class*="inputPrompt"] { width:48% }
+.inputLayoutA1 [class*="inputData"]   { width:48% }
+.inputLayoutA1 [class*="dataLayers"]  { width: calc(100% - 31px); }
+.inputLayoutA1 .inputSuffix           { width:98% }
+.inputLayoutA1 .inputMsg              { width:98% }
+
+.inputLayoutA2                        { display:block }
+.inputLayoutA2 [class*="inputPrompt"] { width:48% }
+.inputLayoutA2 [class*="inputData"]   { width:48% }
+.inputLayoutA2 [class*="dataLayers"]  { width: 100% }
+.inputLayoutA2 .inputSuffix           { width:98% }
+.inputLayoutA2 .inputMsg              { width:98% }
+
+
+/* Layout B -- narrow / wide */
+
+.inputLayoutB                        { display:block }
+.inputLayoutB [class*="inputPrompt"] { width:25% }
+.inputLayoutB [class*="inputData"]   { width:70% }
+.inputLayoutB [class*="dataLayers"]  { width:95% }
+.inputLayoutB .inputSuffix           { width:15% }
+.inputLayoutB .inputMsg              { width:98% }
+
+
+.noMsgArea .inputSuffix   { width:100% }
+.noMsgArea .inputMsg      { width:0 }
+
+
+
+/* Layout C -- wide / narrow */
+
+.inputLayoutC                        { display:block }
+.inputLayoutC [class*="inputPrompt"] { width:74% }
+.inputLayoutC [class*="inputData"]   { width:23% }
+.inputLayoutC [class*="dataLayers"]  { width:99% }
+.inputLayoutC .inputSuffix           { width:49% }
+.inputLayoutC .inputMsg              { width:49% }
+
+.checkboxData [class*="dataLayers"]  { width:35px}
+.checkboxData [class*="inputData"]   { text-align:left}
+.checkboxData .RWDivClass            { text-align:center}
+
+
+/* Layout D -- typically for HTML blocks, mail templates, etc */
+
+.inputLayoutD                        { display:block }
+.inputLayoutD [class*="inputPrompt"] { float:left; width:auto; }
+.inputLayoutD [class*="inputData"]   { float:left; flex-grow:100 }
+.inputLayoutD [class*="dataLayers"]  { float:left;  calc(100% - 28px); }
+.inputLayoutD .inputSuffix           { display:none; }
+.inputLayoutD .inputMsg              { display:none; }
+
+/* Layout E -- no prompt */
+
+.inputLayoutE                        { display:inline-block }
+.inputLayoutE [class*="inputPrompt"] { display:none }
+.inputLayoutE [class*="inputData"]   { width:100%; }
+.inputLayoutE [class*="dataLayers"]  { width: calc(100% - 28px); }
+.inputLayoutE .inputSuffix           { display:none; }
+.inputLayoutE .inputMsg              { display:none; }
+;inputLayoutE .inputToggle           { display:none }
+
+/* Layout ROData */
+
+.inputLayoutROData                        { display:inline-block }
+.inputLayoutROData [class*="inputPrompt"] { display:none }
+.inputLayoutROData [class*="inputData"]   { width:100%; }
+.inputLayoutROData [class*="dataLayers"]  { width: 100% }
+.inputLayoutROData .inputSuffix           { display:none; }
+.inputLayoutROData .inputMsg              { display:none; }
+;inputLayoutROData .inputToggle           { display:none }
+
+/* Layout E1-- no prompt / with suffix */
+
+.inputLayoutE1                        { display:inline-block }
+.inputLayoutE1 [class*="inputPrompt"] { display:none }
+.inputLayoutE1 [class*="inputData"]   { width:99%; }
+.inputLayoutE1 [class*="dataLayers"]  { float:left; width:30%;}
+.inputLayoutE1 .inputSuffix           { width:60%;    }
+.inputLayoutE1 .inputMsg              { display:none; }
+
+/* Layout E2-- radio button no prompt / with suffix */
+
+.inputLayoutE2                        { display:inline-block }
+.inputLayoutE2 [class*="inputPrompt"] { display:none }
+.inputLayoutE2 [class*="inputData"]   { width:99%; }
+.inputLayoutE2 [class*="dataLayers"]  { float:left; width:15%;}
+.inputLayoutE2 .inputSuffix           { width:84%;    }
+.inputLayoutE2 .inputMsg              { display:none; }
+
+/* Layout F -- narrow / wide / no suffix */
+
+.inputLayoutF                        { display:block }
+.inputLayoutF [class*="inputPrompt"] { width:25% }
+.inputLayoutF [class*="inputData"]   { width:71% }
+.inputLayoutF [class*="dataLayers"]  { width:85% }
+.inputLayoutF .inputSuffix           { display:none; }
+.inputLayoutF .inputMsg              { display:none; }
+
+/* Layout F2 -- medium-narrow / wide / no suffix */
+
+.inputLayoutF2                        { display:block }
+.inputLayoutF2 [class*="inputPrompt"] { width:30% }
+.inputLayoutF2 [class*="inputData"]   { width:62% }
+.inputLayoutF2 [class*="dataLayers"]  { width:80% }
+.inputLayoutF2 .inputSuffix           { width:19% }
+.inputLayoutF2 .inputMsg              { display:none; }
+
+
+.inputLayoutF1                        { display:block }
+.inputLayoutF1 [class*="inputPrompt"] { width:25% }
+.inputLayoutF1 [class*="inputData"]   { width:100% }
+.inputLayoutF1 [class*="dataLayers"]  { width:85% }
+.inputLayoutF1 .inputSuffix           { display:none; }
+.inputLayoutF1 .inputMsg              { display:none; }
+
+/* Layout G -- no prompt for HTMLInput block */
+
+.inputLayoutG                        { display:inline-block }
+.inputLayoutG [class*="inputPrompt"] { display:none }
+.inputLayoutG [class*="inputData"]   { width:100%; }
+.inputLayoutG [class*="dataLayers"]  { float:left; width: calc(100% - 28px); }
+.inputLayoutG .inputSuffix           { display:none; }
+.inputLayoutG .inputMsg              { display:none; }
+
+/* Layout H -- narrow / wide / big suffix block */
+
+.inputLayoutH                        { display:block }
+.inputLayoutH [class*="inputPrompt"] { width:25%;  }
+.inputLayoutH [class*="inputData"]   { width:70%;  }
+.inputLayoutH [class*="dataLayers"]  { width:20%;   }
+.inputLayoutH .inputSuffix           { width:49%;  }
+.inputLayoutH .inputMsg              { display:none; }
+
+/* Layout H1 -- narrow / wide / big suffix block */
+
+.inputLayoutH1                        { display:block }
+.inputLayoutH1 [class*="inputPrompt"] { width:25%; vertical-align:top;}
+.inputLayoutH1 [class*="inputData"]   { width:72%; vertical-align:top; }
+.inputLayoutH1 [class*="dataLayers"]  { width:40%; vertical-align:top;  }
+.inputLayoutH1 .inputSuffix           { width:45%; vertical-align:top; }
+.inputLayoutH1 .inputMsg              { display:none; }
+
+/* Layout I -- wide / narrow / no suffix */
+
+.inputLayoutI                        { display:block }
+.inputLayoutI [class*="inputPrompt"] { width:75% }
+.inputLayoutI [class*="inputData"]   { width:15% }
+.inputLayoutI [class*="dataLayers"]  { width:99% }
+.inputLayoutI .inputSuffix           { display:none }
+.inputLayoutI .inputMsg              { display:none }
+
+/* Layout J -- 50/50 / no suffix */
+
+.inputLayoutJ                        { display:block }
+.inputLayoutJ [class*="inputPrompt"] { width:49% }
+.inputLayoutJ [class*="inputData"]   { width:47% }
+.inputLayoutJ [class*="dataLayers"]  { width:99% }
+.inputLayoutJ .inputSuffix           { display:none }
+.inputLayoutJ .inputMsg              { display:none }
+
+/* Layout K -- data only */
+
+.inputLayoutK                        { display:inline-block; margin-right:7px; }
+.inputLayoutK [class*="inputPrompt"] { display:none }
+.inputLayoutK [class*="inputData"]   { width:100% }
+.inputLayoutK [class*="dataLayers"]  { width:90% }
+.inputLayoutK .inputSuffix           { display:none }
+.inputLayoutK .inputMsg              { display:none }
+
+/* Layout L -- attributes */
+
+.inputLayoutL                        { display:block }
+.inputLayoutL [class*="inputPrompt"] { width:100% }
+.inputLayoutL [class*="inputData"]   { width:100% }
+.inputLayoutL [class*="dataLayers"]  { width:99% }
+.inputLayoutL .inputMsg              { width:100% }
+
+/* Layout M -- narrow / wide / 100% suffix next line */
+
+.inputLayoutM                        { display:block }
+.inputLayoutM [class*="inputPrompt"] { width:25% }
+.inputLayoutM [class*="inputData"]   { width:73% }
+.inputLayoutM [class*="dataLayers"]  { width:92% }
+.inputLayoutM .inputSuffix           { width:100% }
+.inputLayoutM .inputMsg              { display:none; }
+
+/* Layout N -- narrow / wide / Inheritance */
+
+.inputLayoutN                                { display:block }
+.inputLayoutN  [class*="inputPrompt"]        { width:25% }
+.inputLayoutN  [class*="inputData"]          { width:25% }
+.inputLayoutN  [class*="inputInheritance"]   { display:inline-block; width:49% }
+.inputLayoutN  [class*="dataLayers"]         { width:35% }
+.inputLayoutN  .inputSuffix                  { width:55%; padding-left:15px }
+.inputLayoutN  .inputMsg                     { width:30% }
+
+/* Layout stacked */
+
+.stacked                             { display:block }
+.stacked [class*="inputPrompt"]      { display:none }
+.stacked [class*="inputData"]        { width:100% }
+.stacked [class*="dataLayers"]       { float:left; width: calc(100% - 28px);  }
+.stacked .inputSuffix                { width:49% }
+.stacked .inputMsg                   { width:49% }
+
+/* Layout stackedTopPrompt */
+
+.stackedTopPrompt                             { display:block }
+.stackedTopPrompt [class*="inputPrompt"]      { width:100%   }
+.stackedTopPrompt [class*="inputData"]        { width: 100% }
+.stackedTopPrompt [class*="dataLayers"]       { float:left;  width: calc(100% - 28px); }
+.stackedTopPrompt .inputSuffix                { width:49% }
+.stackedTopPrompt .inputMsg                   { width:49% }
+
+/* Layout stackedTopPromptB */
+
+.stackedTopPromptB                             { display:block }
+.stackedTopPromptB [class*="inputPrompt"]      { width:100%   }
+.stackedTopPromptB [class*="inputData"]        { width: 49% }
+.stackedTopPromptB [class*="dataLayers"]       { float:left;  width: calc(100% - 28px); }
+.stackedTopPromptB .inputSuffix                { width:49% }
+.stackedTopPromptB .inputMsg                   { width:99% }
+
+.stackedTopPromptInlineSuffix                             { display:block }
+.stackedTopPromptInlineSuffix [class*="inputPrompt"]      { width:100%   }
+.stackedTopPromptInlineSuffix [class*="inputData"]        { width:100%; }
+.stackedTopPromptInlineSuffix [class*="dataLayers"]       { float:left;  width: calc(47% - 28px); }
+.stackedTopPromptInlineSuffix .inputSuffix                { width:99% }
+.stackedTopPromptInlineSuffix .inputMsg                   { width:99% }
+
+.stackedTopPromptNoToggle                             { display:block }
+.stackedTopPromptNoToggle [class*="inputPrompt"]      { width:100%   }
+.stackedTopPromptNoToggle [class*="inputData"]        { width: 100%; }
+.stackedTopPromptNoToggle [class*="dataLayers"]       { float:left;  width: 100% }
+.stackedTopPromptNoToggle .inputSuffix                { width:49% }
+.stackedTopPromptNoToggle .inputMsg                   { width:100% }
+
+/* mobile */
+
+.inputWidthMin                   { width:1%; }
+.inputWidthFull                  { width:100%; }
+.inputWidthM                     { width:100%; }
+.inputWidthM1                    { width:100%; }
+.inputWidthN                     { width:100%; }
+.inputWidthAuto                  { width:auto }
+
+
+@media only screen and (min-width: 600px) /* tablet */
+{
+   .inputWidthMin                   { }
+   .inputWidthFull                  { width:100%; }
+   .inputWidthM                     { width:80%; }
+   .inputWidthM1                    { width:80%; }
+   .inputWidthN                     { width:60%; }
+   .inputWidthAuto                  { width:auto }
+
+   .inputLayoutB [class*="dataLayers"]  { width:75% }
+}
+
+@media only screen and (min-width: 800px) /* desktop */
+{
+   .inputWidthMin                   { }
+   .inputWidthFull                  { width:100%; }
+   .inputWidthInlineM               { width:45%; display:inline-block;}
+   .inputWidthInlineW               { width:60%; display:inline-block;}
+   .inputWidthInlineN               { width:30%; display:inline-block;}
+   .inputWidthM                     { width:50%; }
+   .inputWidthM1                    { width:75%; }
+   .inputWidth65                    { width:65%; }
+   .inputWidthN                     { width:25%; }
+   .inputWidthSm                    { width: 10% }
+   .inputWidthAuto                  { width:auto }
+
+   .inputLayoutB [class*="dataLayers"]  { width:75% }
+   .inputDataXL                   { font-size:20px; }
+   .inputTextXL                   { font-size:20px; }
+}
+
+@media only screen and (min-width:1100px) /* desktop */
+{
+   .inputDataXL                   { font-size:26px; }
+   .inputTextXL                   { font-size:26px; }
+}
+
+.sliderBgnRangeText                 {margin-top:5px; margin-left:30px; font-size:12px; float:left}
+.sliderEndRangeText                 {margin-top:5px; font-size:12px; float:right}
+.checkboxPrompt                     {width:45%; display:inline-block}
+.showInheritance                    { display:inline-block; }
+.hideInheritance                    { display: none; }
+.inputInheritance                   { font-family: var(--fontSecondary); font-weight:normal; display:inline-block; font-size:12px; font-style:italic;}
+
+.inputDataDate                      { calc(100% - 28px); }
+.ui-datepicker-trigger              { position:absolute; }
+.hot                                { color:red; font-weight:bold; }
+.searchIcon                         { float:right; height:35px; width:35px; cursor:pointer; cursor:hand; position:relative; top: -35px; ; right: 10px; }
+.searchBtn                          { float:right; cursor:pointer; cursor:hand; position:relative; top: -37px; ; right: -70px; }
+

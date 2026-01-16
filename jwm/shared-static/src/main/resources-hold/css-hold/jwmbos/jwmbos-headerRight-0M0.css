@@ -1,0 +1,10 @@
+/* nextViewCtrl=0;  sectionCtrl=W;  sectionAtAGlance=0; */
+
+.headerRight0M0 [class*="sectionAtAGlance"]      { display:none; }
+.headerRight0M0 [class*="nextViewCtrl"]          { display:none; }
+.headerRight0M0 [class*="sectionCtrl"]           { width:50% }
+
+@media only screen and (min-width: 600px) /* tablet and larger */
+{
+   .headerRight0M0 [class*="sectionCtrl"]           { width:50% }
+}

@@ -1,0 +1,108 @@
+/* ========== Base ========== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+#calendar {
+  max-width: 1100px;
+  margin: auto;
+}
+
+
+/* ========== Modal Overlay ========== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #ffffff;
+  width: 600px;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+
+/* ========== Modal Form ========== */
+.modal label {
+  display: block;
+  margin-top: 12px;
+  font-size:10pt
+
+}
+
+.modal input {
+  width: calc(100% - 40px);
+  padding: 8px;
+  margin-top: 4px;
+}
+
+.flatpickr-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.flatpickr-wrapper button {
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.buttons {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+}
+
+.modal button {
+  padding: 8px;
+  width: 100%;
+  cursor: pointer;
+}
+
+
+/* ========== FullCalendar Fixes ========== */
+.fc .fc-header-toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.fc .fc-header-toolbar .fc-toolbar-chunk {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.fc .fc-button {
+  width: auto;
+  display: inline-flex;
+}
+
+
+/* ========== Optional Enhancements ========== */
+/* Highlight today's column slightly */
+.fc .fc-day-today {
+  background: rgba(0, 123, 255, 0.05);
+}
+
+/* Make events slightly rounded */
+.fc-event {
+  border-radius: 4px;
+}
+
+.container {
+  display: flex;
+}
+
+.left,
+.right {
+  flex: 1;           /* equal width */
+  padding: 10px;
+}
+

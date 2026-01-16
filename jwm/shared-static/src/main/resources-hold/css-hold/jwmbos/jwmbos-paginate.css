@@ -1,0 +1,11 @@
+.paginateNext                    { display:table-cell; vertical-align:middle; padding:5px; margin:5px}
+.paginateNextLg                  { float:right; vertical-align:middle; padding:20px 5px 5px 5px; margin:5px}
+.paginateOuter                   { float:right; padding:5px; display:table-row; margin-top:10px; margin-bottom:20px;}
+.paginatePageDots                { text-align:center; vertical-align:middle; padding:5px; margin:10px 10px 30px 10px;}
+.paginatePages                   { line-height:30px; display:table-cell; margin:5px; padding:10px; background-color:var(--colorPaginateBackground );}
+.paginatePrefix                  { display:table-cell; font-size:14px; font-weight:bold; margin:5px; padding:5px; background-color:var(--colorPaginateBackground);}
+.paginatePrev                    { display:table-cell; vertical-align:middle; padding:5px; margin:5px }
+.paginatePrevLg                  { float:left; vertical-align:middle;  padding:20px 5px 5px 5px; margin:5px}
+.paginateSuffix                  { display:table-cell; font-size:14px; font-weight:bold; margin:5px; padding:5px; background-color:var(--colorPaginateBackground);}
+.selectPage                      { padding:3px; font-size:14px; color:black; font-weight:bold; border:2px solid black; margin:3px;background-color:var(--colorPaginateActive ); }
+.currentPage                     { opacity:0.5 }

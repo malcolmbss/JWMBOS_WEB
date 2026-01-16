@@ -1,0 +1,841 @@
+/*  Theme Name: Globing | Responsive Bootstrap 4 Landing Template
+    Author: Themesbrand
+    Version: 1.0.0
+    File Description: Main CSS file of the template
+*/
+
+/****************************
+*   1  :  HELPER            *
+*   2  :  NAVBAR-CUSTOM     *
+*   3  :  HOME              *
+*   4  :  SERVICES          *
+*   5  :  FEATURES          *
+*   6  :  CLIENTS           *
+*   7  :  TEAM              *
+*   8  :  FAQ               *
+*   9  :  PRICING BOX       *
+*   10 :  CONTACT           *
+*   11 :  FOOTER            *
+*   12 :  RESPONSIVE        *
+*****************************/
+
+body {
+  line-height: 1.2 !important;
+}
+
+.sectionOuter {
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+p {
+  font-size: 15px;
+}
+
+.btn,
+.btn:focus,
+button,
+button:focus {
+  outline: none !important;
+}
+
+a {
+  text-decoration: none !important;
+  outline: none;
+}
+
+.back-to-top {
+  padding: 0.5em;
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+  display: none;
+  text-align: center;
+  z-index: 10000;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 10px;
+  color: white !important;
+  background-color: #004cff;
+  transition: all 0.5s;
+}
+
+.back-to-top i {
+  color: #fff;
+  font-size: 12px;
+  display: block;
+  line-height: 30px;
+}
+
+/*****************
+    1.HELPER
+*****************/
+
+.section {
+  padding-top: 50px;
+  position: relative;
+  background-color: #fff;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+.title-subtitle {
+  max-width: 600px;
+}
+
+.title-icon {
+  font-size: 32px;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.myBtn {
+  padding: 12px 34px;
+  font-size: 12px;
+  transition: all 0.5s;
+  letter-spacing: 0.6px;
+  color: #fff;
+  box-shadow: none !important;
+  text-transform: uppercase;
+  outline: none !important;
+  font-weight: 700;
+}
+
+.btn-custom {
+  border: 1px solid;
+}
+
+.btn-round {
+  border-radius: 30px;
+}
+
+.vertical-content {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+}
+
+.home-center {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.home-desc-center {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.btn-custom {
+  transition: all 0.5s;
+}
+
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active,
+.btn-custom.focus,
+.btn-custom:active,
+.btn-custom:focus,
+.btn-custom:hover,
+.open > .dropdown-toggle.btn-custom {
+  color: #f3f3f3;
+}
+
+.btn-outline-custom {
+  border: 2px solid #f5f5f5;
+}
+
+.btn-outline-custom:hover,
+.btn-outline-custom:focus,
+.btn-outline-custom:active,
+.btn-outline-custom.active,
+.btn-outline-custom.focus,
+.btn-outline-custom:active,
+.btn-outline-custom:focus,
+.btn-outline-custom:hover,
+.open > .dropdown-toggle.btn-outline-custom {
+  color: #000;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.bg-overlay {
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  background: -webkit-linear-gradient(bottom, #005bea, #00c6fb);
+  opacity: 0.6;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
+/*********************
+    2.NAVBAR-CUSTOM
+**********************/
+
+.navbar-custom {
+  /* background-color: transparent; */
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px 0px !important;
+  width: 100%;
+  border-radius: 0px;
+  z-index: 999;
+  margin-bottom: 0px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.F-custom .navbar-nav li a {
+  color: rgba(255, 255, 255, 0.5) !important;
+  font-size: 18px;
+  background-color: transparent !important;
+  margin: 0 7px;
+  letter-spacing: 0.05em;
+  line-height: 24px;
+  transition: all 0.5s;
+}
+
+.navbar-custom .navbar-brand {
+  color: #004cff !important;
+  text-transform: uppercase;
+  float: left;
+  height: 50px;
+  font-size: 18px;
+  line-height: 20px;
+  padding: 0 15px 0 15px;
+}
+
+.wridzBanner {
+  max-height: 65px;
+  max-width: 125px;
+}
+
+@media (max-width: 991px) {
+  .wridzBanner {
+    max-height: 55px;
+  }
+}
+
+.navbar-custom .nav-social li a {
+  color: #004cff !important;
+  font-size: 18px;
+  padding: 0.5rem;
+}
+
+.navbar-custom .navbar-toggler {
+  color: #fff;
+  font-size: 35px;
+  padding: 0px;
+}
+
+.navbar-custom .navbar-nav li a:hover,
+.navbar-custom .navbar-nav li a:active,
+.navbar-custom .navbar-nav li.active a {
+  color: #004cff !important;
+  transform: scale(1.1);
+}
+
+.navbar-custom.nav-sticky {
+  background-color: #1a1a1a !important;
+  padding: 15px 0px;
+}
+
+.nav-social .facebook {
+  border: 2px solid #5f5f5f;
+  border-radius: 50%;
+  height: 40px;
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+}
+
+.nav-social .nav-number span {
+  font-size: 13px;
+}
+
+.nav-social .nav-number i {
+  position: relative;
+  top: 3px;
+  font-size: 18px;
+}
+
+/*********************
+    3.HOME
+**********************/
+
+.bg-home {
+  background-image: url("../images/driving-a-car-resized-PSRBH75.jpg");
+  position: relative;
+  padding: 190px 0;
+  height: 750px;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-title {
+  font-size: 58px;
+  line-height: 1.4;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px black;
+}
+
+.home-subtitle {
+  font-size: 16px;
+  line-height: 2;
+}
+
+.home-registration-form {
+  border-radius: 3px;
+  box-shadow: 0px 0px 3px 0px #000000;
+}
+
+.home-registration-form .registration-form label {
+  font-size: 13px;
+}
+
+.registration-form .registration-input-box {
+  border: none;
+  border-radius: 5px;
+  color: #999;
+  height: 45px;
+  border: 1px solid #e0e0e0 !important;
+  box-shadow: none !important;
+}
+
+/*---DEMO - 2---*/
+
+.bg-home-full {
+  height: 100vh;
+}
+
+.home-subtitle-center {
+  max-width: 500px;
+}
+
+/*---DEMO - 3---*/
+
+.half-home {
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+}
+
+/*---DEMO - 6---*/
+
+.back-slide {
+  height: 100vh;
+}
+
+.search-form input {
+  padding: 15px 20px;
+  width: 100%;
+  font-size: 17px;
+  color: #4c5667 !important;
+  border: none;
+  outline: none !important;
+  padding-right: 160px;
+  padding-left: 30px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 30px;
+}
+
+.search-form button {
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  outline: none !important;
+  border-radius: 30px;
+  font-size: 17px;
+  padding: 9px 30px;
+}
+
+.search-form form {
+  position: relative;
+  max-width: 600px;
+  margin: 0px auto;
+}
+
+/*---DEMO - 8---*/
+
+.bg-gradient {
+  background-image: linear-gradient(
+    -225deg,
+    #3d4e81 0%,
+    #5753c9 48%,
+    #6e7ff3 100%
+  );
+}
+
+.navbar-light,
+.navbar-light.sticky {
+  background-color: #fff !important;
+  box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1) !important;
+}
+
+.navbar-light .navbar-brand {
+  color: #000 !important;
+}
+
+.navbar-light .navbar-nav li a {
+  color: #828080 !important;
+}
+
+/*--- DEMO - 10---*/
+
+.bg-video {
+  height: 100vh;
+  background-color: #000;
+}
+
+/*---DEMO - 11---*/
+
+.navbar-light.small {
+  min-height: 80px;
+}
+
+/*---DEMO - 12 ---*/
+
+.slidero {
+  position: relative;
+  z-index: 1;
+}
+
+/*---DEMO - 13 ---*/
+
+.main-slider .flex-control-paging li a {
+  width: 11px;
+  height: 11px;
+  display: block;
+  background: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  text-indent: -9999px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  box-shadow: none;
+}
+
+.main-slider .flex-control-paging li a:hover {
+  background: #333;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.main-slider .flex-control-nav {
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  width: auto;
+}
+
+/*---EXTRA PAGES---*/
+
+.bg-login {
+  background-image: url(../images/cartographer.png);
+  height: auto;
+}
+
+.login-table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.login-table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.login-form .form-control {
+  height: 44px;
+  border: none;
+  margin-bottom: 14px;
+  border: 2px solid #eaeaea;
+  border-radius: 0px;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.forgot-pass-txt {
+  line-height: 22px;
+  font-size: 14px;
+}
+
+.page-heading h1 {
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/*********************
+    4.SERVICES-BOX
+**********************/
+
+.services-box {
+  transition: all 0.5s;
+  padding: 30px;
+}
+
+.services-box .services-icon i {
+  font-size: 36px;
+}
+
+.services-box .services-title {
+  font-size: 18px;
+}
+
+.services-box:hover {
+  transform: translate(0, -20px);
+}
+
+/*********************
+    5.FEATURES
+**********************/
+
+.features-desc h2 {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.features-desc p {
+  line-height: 1.8;
+}
+
+/*********************
+    6.CLIENTS
+**********************/
+
+.bg-client {
+  background-image: url("../images/cartographer.png");
+  position: relative;
+}
+
+.testi-user {
+  width: 85px !important;
+  margin-right: 15px;
+  color: #a2a2a2;
+  margin-top: 20px;
+}
+
+.user-review {
+  font-size: 20px;
+  line-height: 36px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.testi-user-name {
+  font-size: 16px;
+}
+
+.test_nav_left {
+  left: 0px;
+}
+
+.test_nav_right {
+  right: 0px;
+}
+
+.test_nav_left,
+.test_nav_right {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #a7a7a7;
+  font-size: 24px;
+  z-index: 5;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.testi-icon {
+  font-size: 30px;
+}
+
+/*********************
+    7.TEAM
+**********************/
+
+.team-social li a {
+  color: #808083;
+  border: 1px solid #f1f1f1;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+  display: inline-block;
+  transition: all 0.5s;
+}
+
+.team-social li a:hover {
+  color: #fff;
+}
+
+.team-box.active {
+  box-shadow: 0px 0px 20px -4px #e8e8e8;
+}
+
+/*********************
+    8.FAQ
+**********************/
+
+.faq-que {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000 !important;
+}
+
+.faq-que {
+  padding: 15px 0px;
+}
+
+/*********************
+    9.PRICING BOX
+**********************/
+
+.price-box {
+  padding: 50px 20px;
+}
+
+.plan-features p {
+  font-size: 14px;
+}
+
+.price-box.active {
+  box-shadow: 0px 0px 20px -4px #e8e8e8;
+}
+
+/*********************
+    10.CONTACT
+**********************/
+
+.form-control {
+  margin-bottom: 25px;
+  box-shadow: none !important;
+  height: 50px;
+  border: 1px solid #e0e0e0;
+}
+
+.contact-border {
+  width: 60px;
+  height: 3px;
+  margin: 20px 0px;
+}
+
+textarea.form-control {
+  height: auto;
+}
+
+.error {
+  margin: 8px 0px;
+  color: red;
+}
+
+#ajaxsuccess {
+  font-size: 16px;
+  width: 100%;
+  display: none;
+  clear: both;
+  margin: 8px 0px;
+}
+
+.error_message {
+  padding: 10px;
+  background-color: rgba(244, 35, 103, 0.2);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-loader {
+  display: none;
+}
+
+#success_page {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#success_page h3 {
+  color: #0dba26;
+  font-size: 22px;
+}
+
+/*********************
+    11.FOOTER
+**********************/
+
+.social .social-icon {
+  border: 2px solid #868e96;
+  border-radius: 50%;
+  transition: all 0.5s;
+  width: 42px;
+  height: 42px;
+  display: block;
+  font-size: 16px;
+  line-height: 40px;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.footer-terms li a:hover {
+  color: #fff !important;
+  transition: all 0.5s;
+}
+
+.footer-terms li::after {
+  content: "|";
+  margin: 0 20px;
+  color: #757575;
+}
+
+.footer-terms li:last-child:after {
+  content: "";
+}
+
+.footer {
+  position: relative;
+  padding-bottom: 25px;
+  margin-top: 30px;
+}
+
+.officeFooter {
+  position: absolute;
+  margin-top: 30px;
+  padding-bottom: 20px;
+  width: 100%;
+  bottom: 0;
+}
+/*********************
+    12.RESPONSIVE
+**********************/
+
+@media (min-width: 200px) and (max-width: 768px) {
+  .navbar-custom {
+    background-color: #000;
+    padding: 10px 0px !important;
+  }
+  .navbar-custom .container {
+    width: 85%;
+  }
+  .about-border-left {
+    border: none;
+  }
+  .bg-home {
+    padding: 120px 0px;
+  }
+  .home-title {
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px black;
+  }
+  .user-review {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .team-box.active {
+    transform: scale(1);
+  }
+  .bg-home-full,
+  .back-slide,
+  .bg-login {
+    height: auto;
+  }
+  .navbar-custom .navbar-toggler {
+    color: #fff;
+    font-size: 26px;
+    border: none;
+  }
+  .navbar-light .navbar-toggler {
+    color: #000;
+    font-size: 26px;
+    border: none;
+  }
+  .half-home {
+    padding: 120px 0 70px;
+  }
+  .navbar-light.small {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 1023px) {
+  .navbar-custom .nav-social {
+    display: none;
+  }
+}
+
+/* THEMEING SECTION */
+
+.text-custom,
+.navbar-light .navbar-nav li a:hover,
+.navbar-light .navbar-nav li a:active,
+.navbar-light .navbar-nav li.active a {
+  color: #37b8df !important;
+}
+
+.bg-custom,
+.btn-custom,
+.main-slider .flex-control-paging li a.flex-active,
+.team-social li a:hover,
+.contact-border,
+.back-to-top:hover {
+  background-color: #37b8df;
+}
+a .btn-custom,
+.registration-input-box:focus,
+.form-control:focus,
+.team-social li a:hover {
+  border-color: #37b8df;
+}
+
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active,
+.btn-custom.focus,
+.btn-custom:active,
+.btn-custom:focus,
+.btn-custom:hover,
+.open > .dropdown-toggle.btn-custom {
+  border-color: #30a0c1;
+  background-color: #30a0c1;
+}
+
+ul,
+ol {
+  line-height: 1.6 !important;
+  font-size: 15px;
+}

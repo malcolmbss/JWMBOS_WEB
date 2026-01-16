@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>jwm</groupId>
+        <artifactId>jwm</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>shared-static</artifactId>
+    <packaging>jar</packaging>
+    <name>WebStatic</name>
+
+    <build>
+        <plugins>
+
+            <!-- Shared deploy logic (NOT executed here) -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>3.1.0</version>
+
+                <executions>
+                    <execution>
+                        <id>deploy-shared-jar</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+
+                        <configuration>
+                            <target>
+
+                                <echo level="info">
+                                        Uploading JAR:
+                                        ${project.build.directory}/${project.build.finalName}.jar
+                                        → ${domain.url}/jar-deployer/deploy/${project.build.finalName}.jar
+                                </echo>
+
+                                <exec executable="curl" failonerror="true">
+                                    <arg value="-u" />
+                                    <arg value="${TomcatAdminCredentials}" />
+
+                                    <arg value="-X" />
+                                    <arg value="PUT" />  
+                                    <arg value="--fail" />
+                                    <arg value="--show-error" />
+                                    <arg value="--silent" />
+
+                                    <arg value="--upload-file" />
+                                    <arg value="${project.build.directory}/${project.build.finalName}.jar" />
+
+                                    <arg value="${domain.url}/jar-deployer/deploy/${project.build.finalName}.jar" />
+                                </exec>
+
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
