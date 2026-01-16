@@ -3,12 +3,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>jwm</artifactId>
+        <artifactId>jwmweb</artifactId>
         <groupId>jwm</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>jwm.webapps</groupId>
+    <groupId>jwm</groupId>
     <artifactId>webapps</artifactId>
     <packaging>pom</packaging>
     <name>Webapps</name>
@@ -34,13 +34,16 @@
                         </goals>
                         <configuration>
                             <target>
-                            <echo>Deploying ${project.name} (${project.build.directory}/${project.build.finalName}.war) to http://${domain.url}/manager/text/deploy?path=/${project.name}&amp;update=true</echo>
+                                <echo>Deploying ${project.name} (${project.build.directory}/${project.build.finalName}.war) to ${domain.url}/manager/text/deploy?path=/${project.name}&amp;update=true</echo>
                                 <exec executable="curl">
                                     <arg value="-u" />
                                     <arg value="Admin:ten10Twenty!" />
+                                    <arg value="--fail" />
+                                    <arg value="--show-error" />
+                                    <arg value="--silent" />
                                     <arg value="--upload-file" />
                                     <arg value="${project.build.directory}/${project.build.finalName}.war" />
-                                    <arg value="http://${domain.url}/manager/text/deploy?path=/${project.name}&amp;update=true" />
+                                    <arg value="${domain.url}/manager/text/deploy?path=/${project.name}&amp;update=true" />
                                 </exec>
                             </target>
                         </configuration>
