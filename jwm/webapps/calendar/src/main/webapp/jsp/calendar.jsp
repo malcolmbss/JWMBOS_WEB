@@ -1,42 +1,40 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
   <!DOCTYPE html>
-  <html>
+  <%@ page import="jwm.svcimpl.jsp.URLParamtersToEL" %>
+    <% URLParamtersToEL.bindParamsToRequest(request); %>
 
-  <head>
-    <title>Southwest Campus LifeMen Calendar</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/app.css">
+      <html>
 
-    <!-- FullCalendar -->
-    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+      <head>
+        <title>${title}</title>
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/app.css">
 
-    <!-- Flatpickr -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  </head>
+        <!-- FullCalendar -->
+        <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
 
-  <body>
+        <!-- Flatpickr -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+      </head>
 
-    <button style="background-color:#1380c1; color:white;" onclick="openInstructions()">
-      Click Here
-    </button>
+      <body>
 
-    to subscribe to this calendar on your mobile device for future updates
-    <div style="margin:5px 0 5px 0; padding:15px; width:100%; text-align:center">
-      <span style="padding:5px; background-color:#1380c1; color:white">Southwest Campus LifeMen
-        Calendar</span>
-    </div>
-    <div style="height:100%" id="calendar"></div>
-    </div>
-    <!-- <div class="buttons">
-      <button type="button" onclick="saveEvent()">Save</button>
-      <button type="button" onclick="closeModal()">Cancel</button>
-    </div> -->
+        <button style="background-color:#1380c1; color:white;" onclick="openInstructions()">
+          Click Here
+        </button>
 
-    <!-- this line MUST follow the id=calendar div tag-->
-    <script src="${pageContext.request.contextPath}/js/calendar.js"></script>
+        to subscribe to this calendar on your mobile device for future updates
+        <div style="margin:5px 0 5px 0; padding:15px; width:100%; text-align:center">
+          <span style="padding:5px; background-color:#1380c1; color:white">${title}</span>
+        </div>
+        <div style="height:100%" id="calendar">data-calendar-name="${calendarName}"></div>
 
 
-  </body>
+        <!-- this line MUST follow the id=calendar div tag-->
+        <script src="${pageContext.request.contextPath}/js/calendar.js"></script>
 
-  </html>
+
+      </body>
+
+      </html>

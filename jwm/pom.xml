@@ -21,8 +21,8 @@
 		<profile>
 			<id>LifeFamily</id>
 			<properties>
-				<domain.name>LifeFamily</domain.name>
-				<domain.url>https://${domain.name}.net</domain.url>
+				<domain.name>LifeFamily.net</domain.name>
+				<domain.url>https://${domain.name}</domain.url>
 				<TomcatAdminCredentials>Admin:ten10Twenty!</TomcatAdminCredentials>
 				<env>${domain.name}Dev</env>
 				<local.domain.directory>s:/domains/${domain.name}</local.domain.directory>
