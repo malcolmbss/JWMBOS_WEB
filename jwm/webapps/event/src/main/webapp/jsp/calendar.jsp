@@ -239,8 +239,8 @@
           const top = Math.round((screen.height - height) / 2);
 
           window.open(
-            'instructions.jsp',
-            'Subscribe Istructions',
+            'subscribe-instructions.jsp',
+            'Subscribe Instructions',
             `width=${width},
      height=${height},
      left=${left},

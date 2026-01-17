@@ -11,7 +11,7 @@
 		<profile>
 			<id>local</id>
 			<properties>
-				<domain.name>LifeFamily.resources</domain.name>
+				<domain.name>LifeFamily.net</domain.name>
 				<domain.url>http://local.${domain.name}</domain.url>
 				<TomcatAdminCredentials>Admin:ten10Twenty!</TomcatAdminCredentials>
 				<env>${domain.name}Local</env>
