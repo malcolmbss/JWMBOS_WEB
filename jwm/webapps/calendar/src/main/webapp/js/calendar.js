@@ -1,101 +1,108 @@
-(() => {
-  let calendar;
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const calendarEl = document.getElementById('calendar');
-    if (!calendarEl) {
-      console.error('Calendar element not found');
-      return;
-    }
+        let calendar;
+        let startPicker, endPicker;
 
-    calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: 'timeGridWeek',
+        document.addEventListener('DOMContentLoaded', function () {
+          const calendarEl = document.getElementById('calendar');
 
-      slotMinTime: '06:00:00',
-      slotMaxTime: '22:00:00',
+          calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'timeGridWeek',
+            slotMinTime: '06:00:00',
+            slotMaxTime: '22:00:00',
+            events: '/calendarmgr/events',
+            selectable: true,
+            editable: true,
+            displayEventTime: true,
+            headerToolbar: {
+              left: 'prev,next today',
+              center: 'title',
+              right: 'dayGridMonth,timeGridWeek'
+            },
+            eventTimeFormat: {
+              hour: 'numeric',
+              minute: '2-digit',
+              meridiem: 'short'
+            },
 
-      selectable: true,
-      editable: false,
-      displayEventTime: true,
+            select: function (info) {
+              document.getElementById('eventTitle').value = '';
+              startPicker.setDate(info.start, true);
+              endPicker.setDate(info.end, true);
 
-      events: `${CALENDAR_CONTEXT}/api/events`,
+              openModal();
+            }
+          });
 
-      headerToolbar: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'dayGridMonth,timeGridWeek'
-      },
+         
+          calendar.render();
 
-      eventTimeFormat: {
-        hour: 'numeric',
-        minute: '2-digit',
-        meridiem: 'short'
-      },
+          // Flatpickr initialization 
+          startPicker = flatpickr('#eventStart', {
+            enableTime: true,
+            time_24hr: true,
+            dateFormat: 'Y-m-d H:i',
+            clickOpens: true
+          });
 
-      select: handleDateSelection,
-      eventClick: handleEventClick
-    });
+          endPicker = flatpickr('#eventEnd', {
+            enableTime: true,
+            time_24hr: true,
+            dateFormat: 'Y-m-d H:i',
+            clickOpens: true
+          });
 
-    calendar.render();
-  });
+        });
 
-  /**
-   * Date range selected → open event creation popup
-   */
-  function handleDateSelection(selectionInfo) {
-    openCreateEventPopup(selectionInfo.start, selectionInfo.end);
-  }
 
-  /**
-   * Optional: click existing event
-   */
-  function handleEventClick(info) {
-    // Hook for later: event details page
-    console.log('Event clicked:', info.event.id);
-  }
+        function saveEvent() {
+          const title = document.getElementById('eventTitle').value;
+          const start = startPicker.selectedDates[0];
+          const end = endPicker.selectedDates[0];
 
-  /**
-   * Opens event creation UI (separate WAR)
-   */
-  function openCreateEventPopup(start, end) {
-    const params = new URLSearchParams({
-      start: start.toISOString(),
-      end: end.toISOString(),
-      source: 'calendar'
-    });
+          if (!title || !start || !end) {
+            alert('All fields are required');
+            return;
+          }
 
-    const width = 720;
-    const height = 650;
+          fetch('/calendarmgr/createEvent', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              title: title,
+              start: start.toISOString(),
+              end: end.toISOString()
+            })
+          }).then(() => {
+            calendar.refetchEvents();
+            closeModal();
+          });
+        }
+         function openModal() {
+            document.getElementById('eventModal').style.display = 'block';
+          }
 
-    const left = Math.round((screen.width - width) / 2);
-    const top = Math.round((screen.height - height) / 2);
+          function closeModal() {
+            document.getElementById('eventModal').style.display = 'none';
+          }
 
-    window.open(
-      `${EVENT_UI_BASE}/createEvent.jsp?${params.toString()}`,
-      'CreateEvent',
-      `
-        width=${width},
-        height=${height},
-        left=${left},
-        top=${top},
-        resizable=yes,
-        scrollbars=yes
-      `
-    );
-  }
+        function openInstructions() {
+          const maxWidth = 1250;
+          const width = Math.min(screen.width, maxWidth);
 
-  /**
-   * Listen for messages from event UI WAR
-   */
-  window.addEventListener('message', event => {
-    // SECURITY: verify origin
-    if (!ALLOWED_EVENT_UI_ORIGINS.includes(event.origin)) {
-      return;
-    }
+          const height = 600;  // pick whatever you want
 
-    if (event.data === 'eventCreated') {
-      calendar.refetchEvents();
-    }
-  });
+          const left = Math.round((screen.width - width) / 2);
+          const top = Math.round((screen.height - height) / 2);
 
-})();
+          window.open(
+            'subscribe-instructions.jsp',
+            'Subscribe Instructions',
+            `width=${width},
+     height=${height},
+     left=${left},
+     top=${top},
+     resizable=yes,
+     scrollbars=yes`
+          );
+
+        }

@@ -55,7 +55,8 @@
     
     <modules>
         <module>calendar</module>
-        <!-- <module>ROOT</module> -->
+        <module>resource</module>
+        <module>event</module>
     </modules>
 
 </project>
