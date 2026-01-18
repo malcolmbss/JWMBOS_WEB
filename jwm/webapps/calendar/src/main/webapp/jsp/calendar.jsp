@@ -28,7 +28,7 @@
         <div style="margin:5px 0 5px 0; padding:15px; width:100%; text-align:center">
           <span style="padding:5px; background-color:#1380c1; color:white">${title}</span>
         </div>
-        <div style="height:100%" id="calendar">data-calendar-name="${calendarName}"></div>
+        <div style="height:100%" id="calendar" data-calendar-name="${calendarName}"></div>
 
 
         <!-- this line MUST follow the id=calendar div tag-->

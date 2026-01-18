@@ -5,9 +5,6 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
-
 public class CalDavUtil {
 
     private static final Pattern VCALENDAR = Pattern.compile("BEGIN:VCALENDAR[\\s\\S]*?END:VCALENDAR");
@@ -24,12 +21,7 @@ public class CalDavUtil {
         return calendars;
     }
 
-    public static String getContextVariable( String aName) {
-        try {
-            InitialContext ctx = new InitialContext();
-            return (String) ctx.lookup("java:comp/env/"+aName);
-        } catch (NamingException e) {
-            throw new RuntimeException(aName+" is not configured in Tomcat", e);
-        }
+    public static String getContextVariable(String aName) {
+        return (null);
     }
 }

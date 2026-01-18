@@ -31,7 +31,7 @@
         <div class="layout">
 
             <div class="left">
-                <iframe id="calendarFrame" src="/calendar/jsp/calendar.jsp?title=${title}">
+                <iframe id="calendarFrame" src="/calendar/jsp/calendar.jsp?title=${title}&calendarName=${calendarName}">
                 </iframe>
             </div>
 

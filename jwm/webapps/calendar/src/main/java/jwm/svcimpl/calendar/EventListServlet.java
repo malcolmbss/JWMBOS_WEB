@@ -42,22 +42,22 @@ import net.fortuna.ical4j.model.property.Summary;
 public class EventListServlet extends HttpServlet {
 
         private static final Logger log = Logger.getLogger(EventListServlet.class.getName());
+        private HttpServletRequest req;
+        private String calendarName;
+        // // ---- CONFIG ----
+        // private static final String CALDAV_URL = "https://cal.lifefamily.net/public/sw-lifemen/";
 
-        // ---- CONFIG ----
-        private static final String CALDAV_URL = "https://cal.lifefamily.net/public/sw-lifemen/";
+        // private static final String USERNAME = "LifeFamilyCalendarAdmin";
 
-        private static final String USERNAME = "LifeFamilyCalendarAdmin";
-
-        private static final String PASSWORD = "!!Life.Family@Cals##";
+        // private static final String PASSWORD = "!!Life.Family@Cals##";
 
         @Override
         protected void doGet(HttpServletRequest req,
                         HttpServletResponse resp)
                         throws IOException {
-
-                String calendarName = req.getParameter("calendarName");
-                String calendarDomain = req.getParameter("calendarDomain");
-                System.out.println("Querying events from calendar: " + calendarName + "@" + calendarDomain);
+                this.req = req; 
+                calendarName = req.getParameter("calendarName");
+                System.out.println("Querying events from calendar: " + req.getServletContext().getInitParameter("calDAVcalendarURL")+calendarName);
 
                 resp.setContentType("application/json");
                 resp.setCharacterEncoding("UTF-8");
@@ -66,12 +66,14 @@ public class EventListServlet extends HttpServlet {
 
                 try {
                         String reportXml = fetchCalendarReport();
+                        System.out.println( reportXml );
                         parseReport(reportXml, events);
                 } catch (Exception e) {
+                        System.out.println( e.getMessage() );
                         log.severe("Event load failed: " + e.getMessage());
                         resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
                 }
-
+System.out.println( events.toString() );
                 try (PrintWriter out = resp.getWriter()) {
                         out.print(events.toString());
                 }
@@ -97,12 +99,13 @@ public class EventListServlet extends HttpServlet {
 
                 HttpUriRequestBase report = new HttpUriRequestBase(
                                 "REPORT",
-                                URI.create(CalDavUtil.getContextVariable( "calDAVcalendarURL")));
+                                URI.create(req.getServletContext().getInitParameter("calDAVcalendarURL")+calendarName));
 
                 report.setHeader("Depth", "1");
                 report.setHeader("Content-Type", "text/xml; charset=utf-8");
 
-                String auth = CalDavUtil.getContextVariable( "calDAVcalendarAdminID") + ":" + CalDavUtil.getContextVariable( "calDAVcalendarAdminPW");
+                String auth = req.getServletContext().getInitParameter("calDAVcalendarAdminID") + ":" + req.getServletContext().getInitParameter("calDAVcalendarAdminPW");
+                System.out.println( auth );
                 String encoded = Base64.getEncoder()
                                 .encodeToString(auth.getBytes(StandardCharsets.UTF_8));
 

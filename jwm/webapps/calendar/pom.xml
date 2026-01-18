@@ -13,7 +13,7 @@
     <packaging>war</packaging>
     <name>calendar</name>
 
-    <dependencies>
+    <dependencies> 
         <dependency>
             <groupId>jakarta.json</groupId>
             <artifactId>jakarta.json-api</artifactId>

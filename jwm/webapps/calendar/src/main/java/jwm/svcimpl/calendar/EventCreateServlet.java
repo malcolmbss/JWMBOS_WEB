@@ -33,10 +33,13 @@ import net.fortuna.ical4j.model.property.Version;
 
 @WebServlet("/createEvent")
 public class EventCreateServlet extends HttpServlet {
+    private HttpServletRequest req;
+      private String calendarName;
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-
+        this.req = req;
+                        calendarName = req.getParameter("calendarName");
         // Read JSON body
         String bodyText = req.getReader()
                 .lines()
@@ -48,14 +51,11 @@ public class EventCreateServlet extends HttpServlet {
             ZonedDateTime start = ZonedDateTime.parse(body.getString("start"));
             ZonedDateTime end = ZonedDateTime.parse(body.getString("end"));
 
-            // JWM: VERY Convoluted requirement... add(..) creates a new instance, but is
-            // defined to return an interface (???) This works:
-            // This is iCal4j.... not my code. I have no control over this requirement
-            // even ChatGPT couldn't figure it out.... I had to go old school.... :-(
-            properties = (PropertyList) properties.add(new DtStart<>(start.toInstant()));
-            properties = (PropertyList) properties.add(new DtEnd<>(end.toInstant()));
-            properties = (PropertyList) properties.add(new Summary(body.getString("title")));
-            properties = (PropertyList) properties.add(new Uid(UUID.randomUUID().toString()));
+
+            properties = (PropertyList) properties.add(new DtStart<>(start.toInstant()))
+                                                    .add(new DtEnd<>(end.toInstant()))
+                                                    .add(new Summary(body.getString("title")))
+                                                    .add(new Uid(UUID.randomUUID().toString()));
 
             VEvent event = new VEvent(properties);
 
@@ -69,7 +69,7 @@ public class EventCreateServlet extends HttpServlet {
             CalScale calScale = new CalScale();
             calScale.setValue("GREGORIAN");
             calProperties = (PropertyList) calProperties.add(calScale);
-            calProperties = (PropertyList) calProperties.add(new ProdId("-//FullCalendar Radicale Demo//EN"));
+            calProperties = (PropertyList) calProperties.add(new ProdId("-//Life.Family//EN"));
 
             ComponentList<VEvent> components = new ComponentList<>();
             components = (ComponentList<VEvent>) components.add(event);
@@ -85,7 +85,7 @@ public class EventCreateServlet extends HttpServlet {
 
             // PUT to Radicale (each event = its own resource)
             URL url = URI.create(
-                    CalDavUtil.getContextVariable( "calDAVcalendarURL")
+                    req.getServletContext().getInitParameter("calDAVcalendarURL")+calendarName+"/"
                             + event.getUid().get().getValue()
                             + ".ics")
                     .toURL();
@@ -114,6 +114,8 @@ public class EventCreateServlet extends HttpServlet {
 
     private String basicAuth() {
         return "Basic " + Base64.getEncoder()
-                .encodeToString((CalDavUtil.getContextVariable( "calDAVcalendarAdminID") + ":" + CalDavUtil.getContextVariable( "calDAVcalendarAdminPW")).getBytes(StandardCharsets.UTF_8));       
+                .encodeToString((req.getServletContext().getInitParameter("calDAVcalendarAdminID") + ":"
+                        + req.getServletContext().getInitParameter("calDAVcalendarAdminPW"))
+                        .getBytes(StandardCharsets.UTF_8));
     }
 }

@@ -3,7 +3,7 @@ const calendarName = calendarEl.dataset.calendarName;
 
 let calendar;
 let startPicker, endPicker;
-
+alert(calendarName);
 document.addEventListener('DOMContentLoaded', function () {
   const calendarEl = document.getElementById('calendar');
 
