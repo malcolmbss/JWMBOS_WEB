@@ -37,7 +37,7 @@
 	</properties>
 
 	<modules>
-		<module>shared-static</module>
+		<!-- <module>shared-static</module> -->
 		<module>webapps</module>  
 	</modules>
 </project>

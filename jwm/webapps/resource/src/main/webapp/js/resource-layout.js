@@ -1,3 +1,4 @@
+
 (function () {
 
     /* ---------------------------
@@ -48,12 +49,58 @@
             return;
         }
 
-        const eventId = event.data.eventId;
-        if (!eventId) return;
+        const id = event.data.id;
+        if (!id) return;
 
         eventFrame.src =
-            "/event/jsp/event-details.jsp?eventId=" +
-            encodeURIComponent(eventId);
+            "/event/jsp/event-details.jsp?id=" +
+            encodeURIComponent(id);
     });
+
+})();
+
+(function () {
+
+    const eventFrame = document.getElementById("eventFrame");
+
+    window.addEventListener("message", function (event) {
+/**
+ * Allowed origins dynamically computed at runtime
+ */
+// const allowedOrigins = new Set([
+//     window.location.origin   // parent origin
+// ]);
+        // Optional: lock this down later
+        // if (event.origin !== window.location.origin) return;
+        if (!event.data || event.data.type !== "calendar-event-click") {
+            return;
+        }
+
+        const id = event.data.id;
+        // if (!id) return;
+
+        // Load event JSP into right-hand frame
+
+            const theURL = "/event/jsp/event-details.jsp?id=" 
+            + encodeURIComponent(event.data.id)
+            +"&title="+encodeURIComponent(event.data.title)
+            +"&start="+encodeURIComponent(event.data.start)
+            +"&end="+encodeURIComponent(event.data.end);    
+        // alert(theURL);
+        eventFrame.src = theURL;
+    });
+
+
+
+// window.addEventListener("message", function(event) {
+
+
+//     if (!event.data || event.data.type !== "calendar-event-click") return;
+
+//     const id = event.data.id;
+
+//     eventFrame.src =
+//         `${eventFrame.dataset.baseUrl}?id=${encodeURIComponent(id)}`;
+// });
 
 })();

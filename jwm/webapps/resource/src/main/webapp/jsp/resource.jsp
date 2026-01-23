@@ -38,7 +38,7 @@
             <div class="divider"></div>
 
             <div class="right">
-                <iframe id="eventFrame" src="/event/jsp/event-details-placeholder.jsp">
+                <iframe id="eventFrame" src="/event/jsp/event-details.jsp">
                 </iframe>
             </div>
 

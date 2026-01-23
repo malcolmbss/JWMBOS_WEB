@@ -1,6 +1,8 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" %> 
+      <%@ page import="jwm.svcimpl.jsp.URLParamtersToEL" %>
+    <% URLParamtersToEL.bindParamsToRequest(request); %>
   <!DOCTYPE html>
-  <%@ page import="jwm.svcimpl.jsp.URLParamtersToEL" %>
+
     <% URLParamtersToEL.bindParamsToRequest(request); %>
 
       <html>
@@ -19,11 +21,9 @@
       </head>
 
       <body>
-
         <button style="background-color:#1380c1; color:white;" onclick="openInstructions()">
           Click Here
         </button>
-
         to subscribe to this calendar on your mobile device for future updates
         <div style="margin:5px 0 5px 0; padding:15px; width:100%; text-align:center">
           <span style="padding:5px; background-color:#1380c1; color:white">${title}</span>

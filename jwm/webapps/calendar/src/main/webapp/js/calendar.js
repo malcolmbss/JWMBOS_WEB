@@ -3,7 +3,7 @@ const calendarName = calendarEl.dataset.calendarName;
 
 let calendar;
 let startPicker, endPicker;
-alert(calendarName);
+
 document.addEventListener('DOMContentLoaded', function () {
   const calendarEl = document.getElementById('calendar');
 
@@ -15,30 +15,49 @@ document.addEventListener('DOMContentLoaded', function () {
     selectable: true,
     editable: true,
     displayEventTime: true,
+
     headerToolbar: {
       left: 'prev,next today',
       center: 'title',
       right: 'dayGridMonth,timeGridWeek'
     },
+
     eventTimeFormat: {
       hour: 'numeric',
       minute: '2-digit',
       meridiem: 'short'
     },
 
-    select: function (info) {
-      document.getElementById('eventTitle').value = '';
-      startPicker.setDate(info.start, true);
-      endPicker.setDate(info.end, true);
+    /* -----------------------------
+       CLICK EXISTING EVENT
+    ------------------------------ */
+    eventClick: function (info) {
+      // alert(`Event: ${info.event.title}\nStart: ${info.event.start.toLocaleString()}\nEnd: ${info.event.end.toLocaleString()}`);
+      console.log("Clicked event: info.event.id = " + info.event.id);
+      window.top.postMessage({
+        type: "calendar-event-click",
+        id: info.event.id,
+        title: info.event.title,
+        start: info.event.start,
+        end: info.event.end
+      }, "*");
+    },
 
-      openModal();
-    }
+    /* -----------------------------
+       DRAG-SELECT EMPTY TIME
+    ------------------------------ */
+    // select: function (info) {
+    //   document.getElementById('eventTitle').value = '';
+    //   startPicker.setDate(info.start, true);
+    //   endPicker.setDate(info.end, true);
+
+    //   openModal();
+    // }
   });
-
 
   calendar.render();
 
-  // Flatpickr initialization 
+  /* Flatpickr initialization */
   startPicker = flatpickr('#eventStart', {
     enableTime: true,
     time_24hr: true,
@@ -52,7 +71,6 @@ document.addEventListener('DOMContentLoaded', function () {
     dateFormat: 'Y-m-d H:i',
     clickOpens: true
   });
-
 });
 
 
