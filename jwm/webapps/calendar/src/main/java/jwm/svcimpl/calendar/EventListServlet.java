@@ -179,14 +179,14 @@ System.out.println( events.toString() );
                                                                                         start.getDate()));
                                                 }
 
-                                                if (end != null) {
-                                                        json.put("end",
-                                                                        DateTimeFormatter.ISO_OFFSET_DATE_TIME.format(
-                                                                                        end.getDate()));
-                                                }
-// <--- NEW LINE TO PASS UID
+if (end != null) {
+        json.put("end",
+                        DateTimeFormatter.ISO_OFFSET_DATE_TIME.format(
+                                        end.getDate()));
+}
+
 if (event.getUid().isPresent()) {
-    json.put("id", event.getUid().get().getValue());
+        json.put("id", event.getUid().get().getValue());
 }
                                                 events.put(json);
                                         }
