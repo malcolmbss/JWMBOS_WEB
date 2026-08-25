@@ -7,34 +7,7 @@
 	<packaging>pom</packaging>
 	<name>jwm</name>
 
-	<profiles>
-		<profile>
-			<id>local</id>
-			<properties>
-				<domain.name>LifeFamily.net</domain.name>
-				<domain.url>http://local.${domain.name}</domain.url>
-				<TomcatAdminCredentials>Admin:ten10Twenty!</TomcatAdminCredentials>
-				<env>${domain.name}Local</env>
-				<local.domain.directory>s:/domains/${domain.name}</local.domain.directory>
-			</properties>
-		</profile>
-		<profile>
-			<id>LifeFamily</id>
-			<properties>
-				<domain.name>LifeFamily.net</domain.name>
-				<domain.url>https://${domain.name}</domain.url>
-				<TomcatAdminCredentials>Admin:ten10Twenty!</TomcatAdminCredentials>
-				<env>${domain.name}Dev</env>
-				<local.domain.directory>s:/domains/${domain.name}</local.domain.directory>
-			</properties>
-		</profile>
-	</profiles>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.release>21</maven.compiler.release>
-		<tools.dir>${base.dir}/tools</tools.dir>
-	</properties>
 
 	<modules>
 		<!-- <module>shared-static</module> -->
